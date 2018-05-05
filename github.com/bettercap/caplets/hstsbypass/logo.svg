@@ -9,8 +9,8 @@
    id="svg8"
    version="1.1"
    viewBox="0 0 1489.259 170.24048"
-   height="170.24048mm"
-   width="1489.259mm">
+   height="482.57144pt"
+   width="4221.5215pt">
   <defs
      id="defs2">
     <rect
@@ -234,6 +234,13 @@
   <g
      transform="translate(-568.61029,723.6897)"
      id="layer1">
+    <rect
+       y="-723.6897"
+       x="568.61029"
+       height="170.24033"
+       width="1489.259"
+       id="rect1431"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.88400102;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:11.5360042, 5.76800212;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
     <image
        width="161.26984"
        height="170.24048"
