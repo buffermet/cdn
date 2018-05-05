@@ -208,15 +208,15 @@
          id="line1226" />
     </mask>
     <clipPath
-       id="clipPath1347"
+       id="clipPath1505"
        clipPathUnits="userSpaceOnUse">
       <rect
-         y="-761.95984"
-         x="1289.167"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99434215;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.97736869, 1.98868435;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect1507"
+         width="843.09259"
          height="238.88094"
-         width="852.71429"
-         id="rect1349"
-         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.99999995, 1.99999998;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+         x="1298.7887"
+         y="-761.95984" />
     </clipPath>
   </defs>
   <metadata
@@ -3342,7 +3342,7 @@ AAAAsHQEEAAAAAAAYOkIIAAAAAAAwNIRQAAAAAAAgKUjgAAAAAAAAEunSfI/X/8IAAAAAACwDP7H
          id="tspan1312">hsts</tspan></text>
     <text
        transform="translate(0,1.9997413)"
-       clip-path="url(#clipPath1347)"
+       clip-path="url(#clipPath1505)"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:81.05076599px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#d92d21;fill-opacity:1;stroke:none;stroke-width:2.0262692"
        x="762.24146"
