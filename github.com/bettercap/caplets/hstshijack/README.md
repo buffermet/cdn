@@ -2,6 +2,12 @@
   <img height="64px" src="https://cdn.rawgit.com/yungtravla/cdn/ccdc3b8d/github.com/bettercap/caplets/hstshijack/logo.svg" />
 </p>
 
+<br>
+
+<p align="center">
+  <img src="" />
+</p>
+
 **caplets/hstshijack.cap**
 
 ```sh
