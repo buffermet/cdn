@@ -36,7 +36,7 @@ set hstshijack.wallets.blockafterpost        false
 set hstshijack.wallets.ignoreafterpost       true
 
 # Launch
-set http.proxy.script /root/caplets_dev/hstshijack.js
+set http.proxy.script /root/caplets/hstshijack.js
 set net.sniff.verbose false
 net.sniff   on
 http.proxy  on
