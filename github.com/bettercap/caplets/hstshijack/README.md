@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" />
+  <img src="https://cdn.rawgit.com/yungtravla/cdn/ccdc3b8d/github.com/bettercap/caplets/hstshijack/logo.svg" />
 </p>
 
 **caplets/hstshijack.cap**
