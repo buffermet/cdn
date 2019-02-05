@@ -2495,9 +2495,9 @@
 /* yungtravla edits */
 
     .gh-header {
-        background-color: none !important;
+        background: none !important;
     }
 
     gh-header-shadow box-shadow {
-        background-color: var(--accent-color) !important;
+        background: var(--accent-color) !important;
     }
