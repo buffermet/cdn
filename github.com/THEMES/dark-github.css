@@ -2498,6 +2498,6 @@
         background: none !important;
     }
 
-    gh-header-shadow box-shadow {
+    .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
         background: var(--accent-color) !important;
     }
