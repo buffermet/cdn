@@ -2490,3 +2490,14 @@
     div.application-main div.container-xl > div.position-relative div[style] {
         background: var(--body-color) !important;
     }
+
+
+/* yungtravla edits */
+
+    .gh-header {
+        background-color: none;
+    }
+
+    gh-header-shadow box-shadow {
+        background-color: var(--accent-color);
+    }
