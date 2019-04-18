@@ -1,14 +1,14 @@
 /* Colors */
 
     :root {
-        --body-color: #1a2632;
-        --accent-color: #243447;
-        --depth-color: #151f29;
-        --border-color: #304251;
+        --body-color: #000;
+        --accent-color: #111;
+        --depth-color: #222;
+        --border-color: #333;
         --link-color: #03A9F4;
         --icon-color: #8899a6;
         --primary-text-color: #ffffff;
-        --secondary-text-color: #607d8b;
+        --secondary-text-color: #aaa;
         --code-blob-color: #537698;
     }
 
