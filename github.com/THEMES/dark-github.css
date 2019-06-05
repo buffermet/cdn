@@ -54,7 +54,8 @@
 
     .features-list .list-divider,
     .setup-form .tos-info,
-    .setup-form .setup-organization-next {
+    .setup-form .setup-organization-next,
+    .avatar-before-user-status {
         border-color: var(--border-color);
     }
 
