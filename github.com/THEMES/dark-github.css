@@ -329,11 +329,11 @@
     /* Repo Page (Main) */
 
     .repohead.experiment-repo-nav {
-        background-color: var(--depth-color);
+        background-color: var(--body-color);
     }
 
     .pagehead {
-        border-color: var(--border-color);
+        border-color: var(--body-color);
     }
 
     .repository-meta {
