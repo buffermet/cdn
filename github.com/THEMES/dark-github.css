@@ -2492,13 +2492,14 @@
         background: var(--body-color) !important;
     }
 
-
-/* yungtravla edits */
-
     .gh-header {
         background: none !important;
     }
 
     .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
         background: var(--accent-color) !important;
+    }
+
+    .bg-blue-light {
+        background-color: var(--body-color) !important;
     }
