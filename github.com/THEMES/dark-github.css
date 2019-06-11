@@ -1639,7 +1639,7 @@
     }
 
     .user-profile-nav {
-        background-color: var(--accent-color);
+        background-color: var(--body-color);
         border-color: var(--border-color);
     }
 
