@@ -36,7 +36,7 @@
     /* Main Site and New User */
 
     .Header {
-        background-color: var(--accent-color);
+        background-color: var(--body-color);
     }
 
     .Header .header-search-wrapper {
