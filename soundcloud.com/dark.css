@@ -1,5 +1,5 @@
 body {
-	  background-color: #161616 !important;
+	background-color: #161616 !important;
 }
 
 input.commentForm__input {
@@ -8,6 +8,10 @@ input.commentForm__input {
 
 body {
     background: #111 !important;
+}
+
+div.playControls {
+    z-index: 9999999;
 }
 
 html,
@@ -22,7 +26,7 @@ div.volume__sliderWrapper,
 div.searchTitle,
 div.l-top,
 div.dialog {
-	  background-color: #111 !important;
+	background-color: #111 !important;
 }
 
 div.commentForm__wrapper,
@@ -31,6 +35,6 @@ ul.userNetworkTabs,
 div.listenEngagement,
 input.commentForm__input,
 button.sc-button-responsive {
-	  background-color: #111 !important;
-	  border-color: #111 !important;
+	background-color: #111 !important;
+	border-color: #111 !important;
 }
