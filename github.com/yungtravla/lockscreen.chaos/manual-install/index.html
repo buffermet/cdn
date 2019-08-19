@@ -99,112 +99,38 @@
         <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
         <p>Inside the command prompt, enter the following command.</p>
       </break-word>
-      <pre>
-        ./adb.exe root
-        <br>
-        ./adb.exe shell
-      </pre>
+      <pre>./adb.exe root<br>./adb.exe shell</pre>
       <break-word>
         <p><br><span class="shell">Mac users</span></p>
         <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
         <p></p>
       </break-word>
-      <pre>
-        ./adb root && ./adb shell
-      </pre>
+      <pre>./adb root && ./adb shell</pre>
       <break-word>
         <p><br><span class="shell">Linux users</span></p>
         <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
         <p>Enter the following command.</p>
       </break-word>
-      <pre>
-        ./adb root && ./adb shell
-      </pre>
+      <pre>./adb root && ./adb shell</pre>
       <p><br></p>
       <h2 class="adb">ADB commands</h2>
       <p><br>Set the variables.</p>
       <pre>
         <span class="pre adb comment">&num; set the variables</span>
-        <br>
-        CHAOS_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.chaos\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;"
-        <br><br>
-        CHAOS_POLICIES_ACCESS=600
-        <br><br>
-        CHAOS_POLICIES_UID=1000
-        <br><br>
-        CHAOS_POLICIES_GID=1000
-        <br><br>
-        CHAOS_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}"
-        <br><br>
-        CHAOS_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`
-        <br><br>
-        CHAOS_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`
-        <br><br>
-        CHAOS_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`
-        <br><br>
-        CHAOS_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`
-        <br><br>
-        CHAOS_PKG_PATH=`pm path com.github.yungtravla.lockscreen.chaos | grep -ao "/.*"`
-      </pre>
+        <br>CHAOS_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.chaos\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;"<br><br>CHAOS_POLICIES_ACCESS=600<br><br>CHAOS_POLICIES_UID=1000<br><br>CHAOS_POLICIES_GID=1000<br><br>CHAOS_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}"<br><br>CHAOS_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`<br><br>CHAOS_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_PKG_PATH=`pm path com.github.yungtravla.lockscreen.chaos | grep -ao "/.*"`</pre>
       <p><br>Disable selinux.</p>
-      <pre>
-        <span class="pre adb comment">&num; disable selinux</span>
-        <br>
-        setenforce 0
-      </pre>
+      <pre><span class="pre adb comment">&num; disable selinux</span><br>setenforce 0</pre>
       <p><br>Add a lock-task-component for Chaos Lockscreen.</p>
       <pre>
-        <span class="pre adb comment">&num; add lock-task-component and lock-task-feature</span>
-        <br>
-        <span class="pre adb comment">&num; then reset file permissions</span>
-        <br>
-        echo -e "$CHAOS_POLICIES" &gt; /data/system/device_policies.xml \
-        <br>&nbsp;&nbsp;&& chmod $CHAOS_POLICIES_ACCESS /data/system/device_policies.xml \
-        <br>&nbsp;&nbsp;&& chown $CHAOS_POLICIES_UID /data/system/device_policies.xml \
-        <br>&nbsp;&nbsp;&& chgrp $CHAOS_POLICIES_GID /data/system/device_policies.xml
-      </pre>
+        <span class="pre adb comment">&num; add lock-task-component and lock-task-feature</span><br><span class="pre adb comment">&num; then reset file permissions</span><br>echo -e "$CHAOS_POLICIES" &gt; /data/system/device_policies.xml \<br>&nbsp;&nbsp;&& chmod $CHAOS_POLICIES_ACCESS /data/system/device_policies.xml \<br>&nbsp;&nbsp;&& chown $CHAOS_POLICIES_UID /data/system/device_policies.xml \<br>&nbsp;&nbsp;&& chgrp $CHAOS_POLICIES_GID /data/system/device_policies.xml</pre>
       <p><br>Execute the following code if you want to stop Android from showing a &quot;screen pinned&quot; message every time you lock your device.</p>
-      <pre>
-        <span class="pre adb comment">&num; if current sdk version is 28 or newer to support custom lock-task-features</span>
-        <br>
-        <span class="pre adb comment">&num; then deny TOAST_WINDOW for user android</span>
-        <br>
-        if [ $CHAOS_SDK_VERSION -lt 28 ]; then
-        <br>
-        &nbsp;&nbsp;appops set android TOAST_WINDOW deny
-        <br>
-        fi
-      </pre>
+      <pre><span class="pre adb comment">&num; if current sdk version is 28 or newer to support custom lock-task-features</span><br><span class="pre adb comment">&num; then deny TOAST_WINDOW for user android</span><br>if [ $CHAOS_SDK_VERSION -lt 28 ]; then<br>&nbsp;&nbsp;appops set android TOAST_WINDOW deny<br>fi</pre>
       <p><br>Set Chaos Lockscreen as a system app to enable persistence.</p>
-      <pre>
-        <span class="pre adb comment">&num; set as system app</span>
-        <br>
-        (mount -o rw,remount /system; mount -o rw,remount /; \
-        <br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen; \
-        <br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&& chmod 644 /system/app/ChaosLockscreen/base.apk \
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&& (mount -o ro,remount /system; \
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /)
-      </pre>
+      <pre><span class="pre adb comment">&num; set as system app</span><br>(mount -o rw,remount /system; mount -o rw,remount /; \<br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen; \<br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& chmod 644 /system/app/ChaosLockscreen/base.apk \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& (mount -o ro,remount /system; \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /)</pre>
       <p><br>Set Chaos Lockscreen activation status.</p>
-      <pre>
-        <span class="pre adb comment">&num; mark lockscreen as active</span>
-        <br>
-        echo "$CHAOS_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \
-        <br>&nbsp;&nbsp;&& chmod $CHAOS_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \
-        <br>&nbsp;&nbsp;&& chown $CHAOS_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \
-        <br>&nbsp;&nbsp;&& chgrp $CHAOS_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json
-      </pre>
+      <pre><span class="pre adb comment">&num; mark lockscreen as active</span><br>echo "$CHAOS_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chmod $CHAOS_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chown $CHAOS_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chgrp $CHAOS_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json</pre>
       <p><br>Now re-enable selinux and reboot your device.</p>
-      <pre>
-        <span class="pre adb comment">&num; re-enable selinux</span>
-        <br>
-        setenforce 1
-        <br><br>
-        <span class="pre adb comment">&num; reboot</span>
-        <br>
-        reboot
-      </pre>
+      <pre><span class="pre adb comment">&num; re-enable selinux</span><br>setenforce 1<br><br><span class="pre adb comment">&num; reboot</span><br>reboot</pre>
     </container>
   </body>
 </html>
