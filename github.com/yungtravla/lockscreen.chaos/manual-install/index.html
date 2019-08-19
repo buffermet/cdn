@@ -40,13 +40,13 @@
       html body container p img {
         height: 14pt;
         vertical-align: middle;
-        margin-left: 2pt
+        margin-left: 2pt;
       }
       html body container p {
-        font-size: 1em;
+        font-size: 14pt;
       }
       html body container h1 {
-        font-size: 2.4em;
+        font-size: 24pt;
         font-weight: normal;
       }
       html body container h1.shell {
@@ -66,13 +66,13 @@
         background-color: rgb(16,16,16);
         border-radius: 2pt;
         padding: 4pt;
-        font-size: 1em;
+        font-size: 14pt;
       }
       html body container pre {
         background-color: rgb(16,16,16);
         border-radius: 8pt;
         padding: 16pt;
-        font-size: 1.4em;
+        font-size: 14pt;
         color: rgb(128,128,128);
         white-space: pre-wrap;
         white-space: -moz-pre-wrap;
@@ -85,6 +85,7 @@
       }
       html body container center img.logo {
         margin: 32pt 0;
+        width: 64pt;
         pointer-events: none;
         user-select: none;
         -moz-user-select: none;
@@ -95,7 +96,7 @@
   <body>
     <container>
       <center>
-        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_launcher_round.png" width="128pt"></img>
+        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/chaos_icon_round.svg"></img>
       </center>
       <h1>Manually enabling Chaos Lockscreen</h1>
       <break-word>
@@ -129,7 +130,7 @@
       <p><br>Execute the following code if you want to stop Android from showing a &quot;screen pinned&quot; message every time you lock your device.</p>
       <pre><span class="pre adb comment">&num; if current sdk version is 28 or newer to support custom lock-task-features</span><br><span class="pre adb comment">&num; then deny TOAST_WINDOW for user android</span><br>if [ $CHAOS_SDK_VERSION -lt 28 ]; then<br>&nbsp;&nbsp;appops set android TOAST_WINDOW deny<br>fi</pre>
       <p><br>Set Chaos Lockscreen as a system app to enable persistence.</p>
-      <pre><span class="pre adb comment">&num; set as system app</span><br>(mount -o rw,remount /system; mount -o rw,remount /; \<br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen; \<br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& chmod 644 /system/app/ChaosLockscreen/base.apk \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& (mount -o ro,remount /system; \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /)</pre>
+      <pre><span class="pre adb comment">&num; set as system app</span><br>(mount -o rw,remount /system; <br>&nbsp;&nbsp;mount -o rw,remount /;<br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen;<br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& chmod 644 /system/app/ChaosLockscreen/base.apk \<br>&nbsp;&nbsp;&nbsp;&nbsp;&& (mount -o ro,remount /system;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /)</pre>
       <p><br>Set Chaos Lockscreen activation status.</p>
       <pre><span class="pre adb comment">&num; mark lockscreen as active</span><br>echo "$CHAOS_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chmod $CHAOS_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chown $CHAOS_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&& chgrp $CHAOS_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json</pre>
       <p><br>Now re-enable selinux and reboot your device.</p>
