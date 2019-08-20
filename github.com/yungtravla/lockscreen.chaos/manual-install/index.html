@@ -30,8 +30,7 @@
       html body container a {
         color: rgb(172,0,255);
       }
-      html body container a:active {
-        color: rgb(122,0,205);
+      html body container a:hover {
         text-decoration: none;
       }
       html body container a:focus {
@@ -98,7 +97,7 @@
   <body>
     <container>
       <center>
-        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/chaos_icon_round.svg"></img>          
+        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/chaos_icon_round.svg"></img>
       </center>
       <break-word>
         <h1 class="shell">Starting ADB</h1>
@@ -121,7 +120,7 @@
       </break-word>
       <pre>./adb root && ./adb shell</pre>
       <p><br></p>
-      <h1 class="adb">ADB commands</h1>
+      <h1 class="adb">ADB shell commands</h1>
       <p><br>Set the variables.</p>
       <pre><span class="pre adb comment">&num; set the variables</span><br>CHAOS_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.chaos\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;"<br><br>CHAOS_POLICIES_ACCESS=600<br><br>CHAOS_POLICIES_UID=1000<br><br>CHAOS_POLICIES_GID=1000<br><br>CHAOS_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}"<br><br>CHAOS_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`<br><br>CHAOS_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`<br><br>CHAOS_PKG_PATH=`pm path com.github.yungtravla.lockscreen.chaos | grep -ao "/.*"`</pre>
       <p><br>Disable selinux.</p>
