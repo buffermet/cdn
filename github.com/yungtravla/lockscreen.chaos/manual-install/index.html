@@ -99,8 +99,9 @@
         color: rgb(0,255,167);
       }
       html body container alert-red {
+        position: relative;
         display: block;
-        padding: 8pt 16pt 8pt 48pt;
+        padding: 8pt 16pt 8pt 80pt;
         background-color: rgb(196,0,0);
       }
       html body container alert-red a {
@@ -108,10 +109,16 @@
         font-weight: 900;
       }
       html body container alert-red p img {
-        width: 16pt;
-        height: 16pt;
-        margin-right: 16pt;
-        margin-left: -32pt;
+        position: absolute;
+        top: 50%;
+        left: 16pt;
+        margin-top: -24pt;
+        width: 48pt;
+        height: 48pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        pointer-events: none;
       }
       html body container center menu {
         padding: 0;
