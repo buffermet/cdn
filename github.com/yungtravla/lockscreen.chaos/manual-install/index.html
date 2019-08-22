@@ -207,7 +207,8 @@
       hr {
         height: 1pt;
         width: 100%;
-        margin: 32pt 0;
+        margin: 0;
+        padding: 0;
         background-color: rgb(64,64,64);
         border: none;
       }
@@ -245,7 +246,7 @@
         <p><br>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs it as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
         <label class="toggle-auto" for="toggle-auto">
           <h3>DOWNLOAD INSTALLER</h3>
-          <p>(choose your platform)</p>
+          <p>(choose platform)</p>
         </label>
         <input class="display-none" type="checkbox" id="toggle-auto">
 
@@ -257,11 +258,9 @@
           <indent>
             <break-word>
               <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_windows.svg">Windows users</span></p>
-              <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
-              <p>Inside the command prompt, enter the following command.</p>
-            </break-word>
-            <pre>./adb.exe root &amp;&amp; ./adb.exe shell</pre>
-            <break-word>
+              <div class="button">
+                64-bit
+              </div>
               <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_apple.svg">Mac users</span></p>
               <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
               <p>Inside the terminal window, enter the following command.</p>
