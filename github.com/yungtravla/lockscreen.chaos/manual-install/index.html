@@ -119,20 +119,21 @@
       html body container pre span.pre.adb.comment {
         color: rgb(0,255,167);
       }
-      html body container alert-red {
+      html body container alert-black {
         position: relative;
         display: block;
-        padding: 8pt 16pt 8pt 80pt;
-        background-color: rgb(196,0,0);
+        padding: 8pt 16pt 8pt 72pt;
+        background-color: rgb(0,0,0);
+        color: rgb(196,0,0);
       }
-      html body container alert-red a {
-        color: rgb(255,255,255);
+      html body container alert-black a {
+        color: rgb(255,0,0);
         font-weight: 900;
       }
-      html body container alert-red p img {
+      html body container alert-black p img {
         position: absolute;
         top: 50%;
-        left: 16pt;
+        left: 8pt;
         margin-top: -24pt;
         width: 48pt;
         height: 48pt;
@@ -238,9 +239,9 @@
       <p><br></p>
       <break-word>
         <p></p>
-        <alert-red>
+        <alert-black>
           <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you begin the installation you must first <a href="">enable ADB</a> on your Android device.</p>
-        </alert-red>
+        </alert-black>
         <p><br></p>
         <h1>Installer</h1>
         <p><br>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs it as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
