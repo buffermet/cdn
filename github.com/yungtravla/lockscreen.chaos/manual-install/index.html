@@ -184,8 +184,10 @@
         cursor: pointer;
         border-radius: 8pt;
       }
-      html body container label[class*=toggle-]:hover {
-        background-color: rgb(32,32,32);
+      @media(hover: hover) and (pointer: fine) {
+        html body container label[class*=toggle-]:hover {
+          background-color: rgb(32,32,32);
+        }
       }
       html body container label[class*=toggle-] h3 {
         margin: 0;
@@ -209,7 +211,7 @@
       }
     </style>
   </head>
-  <body ontouchstart="">
+  <body>
     <container>
       <center>
         <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/chaos_icon_round.svg"></img>
