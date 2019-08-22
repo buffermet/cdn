@@ -43,9 +43,6 @@
         display: block;
         max-height: 0pt;
         overflow: hidden;
-        transition: max-height 360ms linear;
-        -moz-transition: max-height 360ms linear;
-        -webkit-transition: max-height 360ms linear;
       }
       html body container break-word {
         word-wrap: break-word;
@@ -202,10 +199,10 @@
         font-weight: 500;
       }
       input[id=toggle-auto]:checked + accordion-auto {
-        max-height: 3200pt;
+        max-height: 9999pt;
       }
       input[id=toggle-manual]:checked + accordion-manual {
-        max-height: 3200pt;
+        max-height: 9999pt;
       }
       .display-none {
         display: none;
