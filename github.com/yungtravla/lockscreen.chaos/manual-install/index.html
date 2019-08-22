@@ -204,6 +204,13 @@
       input[id=toggle-manual]:checked + accordion-manual {
         max-height: 9999pt;
       }
+      hr {
+        height: 1pt;
+        width: 100%;
+        margin: 32pt 0;
+        background-color: rgb(64,64,64);
+        border: none;
+      }
       .display-none {
         display: none;
       }
@@ -229,6 +236,11 @@
       </center>
       <p><br></p>
       <break-word>
+        <p></p>
+        <alert-red>
+          <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you begin the installation you must first <a href="">enable ADB</a> on your Android device.</p>
+        </alert-red>
+        <p><br></p>
         <h1>Simple installation</h1>
         <p><br>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs it as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
         <label class="toggle-auto" for="toggle-auto">
@@ -239,18 +251,17 @@
 
         <accordion-auto class="accordion">
           <break-word>
-            <p></p>
-            <alert-red>
-              <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you follow these instructions you must first <a href="">enable ADB</a> on your Android device.</p>
-            </alert-red>
             <p><br></p>
-            <h1 class="shell">Starting ADB</h1>
+            <h1 class="shell">Download the installer</h1>
             <p><br>To enable the Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
           </break-word>
         </accordion-auto>
       </break-word>
 
+      <hr>
+
       <break-word>
+        <p><br></p>
         <h1>Manual installation</h1>
         <p><br>The manual installation method is meant for advanced users and can be used for debugging.</p>
         <label class="toggle-manual" for="toggle-manual">
@@ -261,10 +272,6 @@
 
         <accordion-manual class="accordion">
           <break-word>
-            <p></p>
-            <alert-red>
-              <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you follow these instructions you must first <a href="">enable ADB</a> on your Android device.</p>
-            </alert-red>
             <p><br></p>
             <h1 class="shell">Starting ADB</h1>
             <p><br>To enable the Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
