@@ -245,7 +245,7 @@
         <p><br>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs it as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
         <label class="toggle-auto" for="toggle-auto">
           <h3>DOWNLOAD INSTALLER</h3>
-          <p>(recommended)</p>
+          <p>(choose your platform)</p>
         </label>
         <input class="display-none" type="checkbox" id="toggle-auto">
 
@@ -253,8 +253,27 @@
           <break-word>
             <p><br></p>
             <h1 class="shell">Download the installer</h1>
-            <p><br>To enable the Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
           </break-word>
+          <indent>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_windows.svg">Windows users</span></p>
+              <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
+              <p>Inside the command prompt, enter the following command.</p>
+            </break-word>
+            <pre>./adb.exe root &amp;&amp; ./adb.exe shell</pre>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_apple.svg">Mac users</span></p>
+              <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
+              <p>Inside the terminal window, enter the following command.</p>
+            </break-word>
+            <pre>./adb root &amp;&amp; ./adb shell</pre>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_linux.svg">Linux users</span></p>
+              <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
+              <p>Enter the following command.</p>
+            </break-word>
+            <pre>./adb root &amp;&amp; ./adb shell</pre>
+          </indent>
         </accordion-auto>
         <p><br></p>
       </break-word>
@@ -263,11 +282,11 @@
 
       <break-word>
         <p><br></p>
-        <h1>Install from source</h1>
-        <p><br>The manual installation method is meant for advanced users to help with debugging.</p>
+        <h1>Install with ADB</h1>
+        <p><br>The ADB method is meant for advanced users to help with debugging.</p>
         <label class="toggle-manual" for="toggle-manual">
-          <h3>INSTALL FROM SOURCE</h3>
-          <p>(for advanced users)</p>
+          <h3>INSTALL WITH ADB</h3>
+          <p>(advanced users)</p>
         </label>
         <input class="display-none" type="checkbox" id="toggle-manual">
 
