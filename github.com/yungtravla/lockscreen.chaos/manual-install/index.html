@@ -213,7 +213,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        background-color: rgb(48,48,48);
+        background-color: rgb(32,32,32);
         border: none;
       }
       .display-none {
@@ -302,7 +302,11 @@
             <break-word>
               <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_apple.svg">Mac users</span></p>
               <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
-              <p>Inside the terminal window, enter the following command.</p>
+              <p>Now connect your Android device with a USB and enter the following command in the terminal.</p>
+            </break-word>
+            <pre>./adb kill-server && ./adb devices</pre>
+            <break-word>
+              <p>Accept the prompt on your connected Android device, then enter the following command in the terminal.</p>
             </break-word>
             <pre>./adb root &amp;&amp; ./adb shell</pre>
             <break-word>
