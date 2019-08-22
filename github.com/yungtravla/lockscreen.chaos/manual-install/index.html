@@ -15,6 +15,21 @@
         color: rgb(255,255,255);
         font-family: sans-serif, helvetica, arial;
       }
+      html body split-two {
+        display: block;
+        width: calc(100% / 2);
+        float: left;
+      }
+      html body split-three {
+        display: block;
+        width: calc(100% / 3);
+        float: left;
+      }
+      html body split-four {
+        display: block;
+        width: calc(100% / 4);
+        float: left;
+      }
       html body container {
         display: block;
         max-width: 640pt;
@@ -22,6 +37,14 @@
         padding: 0 16pt;
         overflow: hidden;
         word-break: break-all;
+      }
+      html body container .accordion {
+        display: block;
+        max-height: 0pt;
+        overflow: hidden;
+        transition: max-height 360ms linear;
+        -moz-transition: max-height 360ms linear;
+        -webkit-transition: max-height 360ms linear;
       }
       html body container break-word {
         word-wrap: break-word;
@@ -149,6 +172,43 @@
         -moz-user-select: none;
         -webkit-user-select: none;
       }
+      html body container label[class*=toggle-] {
+        display: inline-block;
+        margin-top: 16pt;
+        margin-bottom: 16pt;
+        padding: 8pt 16pt;
+        background-color: rgb(16,16,16);
+        color: rgb(255,255,255);
+        font-weight: 200;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        cursor: pointer;
+        border-radius: 8pt;
+      }
+      html body container label[class*=toggle-]:hover {
+        background-color: rgb(32,32,32);
+      }
+      html body container label[class*=toggle-] h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 14pt;
+      }
+      html body container label[class*=toggle-] p {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        font-weight: 500;
+      }
+      input[id=toggle-auto]:checked + accordion-auto {
+        max-height: 3200pt;
+      }
+      input[id=toggle-manual]:checked + accordion-manual {
+        max-height: 3200pt;
+      }
+      .display-none {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -169,44 +229,78 @@
           </break-word>
         </menu>
       </center>
+      <p><br></p>
       <break-word>
-        <p><br></p>
-        <alert-red>
-          <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you follow these instructions you must first <a href="">enable ADB with root access</a> on your Android device.</p>
-        </alert-red>
-        <p><br></p>
-        <h1 class="shell">Starting ADB</h1>
-        <p><br>To enable Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
+        <h1>Simple installation</h1>
+        <p><br>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs the app as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
+        <label class="toggle-auto" for="toggle-auto">
+          <h3>SIMPLE INSTALL</h3>
+          <p>(recommended)</p>
+        </label>
+        <input class="display-none" type="checkbox" id="toggle-auto">
+
+        <accordion-auto class="accordion">
+          <break-word>
+            <p><br></p>
+            <alert-red>
+              <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you follow these instructions you must first <a href="">enable ADB</a> on your Android device.</p>
+            </alert-red>
+            <p><br></p>
+            <h1 class="shell">Starting ADB</h1>
+            <p><br>To enable the Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
+          </break-word>
+        </accordion-auto>
       </break-word>
-      <indent>
-        <break-word>
-          <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_windows.svg">Windows users</span></p>
-          <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
-          <p>Inside the command prompt, enter the following command.</p>
-        </break-word>
-        <pre>./adb.exe root &amp;&amp; ./adb.exe shell</pre>
-        <break-word>
-          <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_apple.svg">Mac users</span></p>
-          <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
-          <p>Inside the terminal window, enter the following command.</p>
-        </break-word>
-        <pre>./adb root &amp;&amp; ./adb shell</pre>
-        <break-word>
-          <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_linux.svg">Linux users</span></p>
-          <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
-          <p>Enter the following command.</p>
-        </break-word>
-        <pre>./adb root &amp;&amp; ./adb shell</pre>
-      </indent>
+
       <break-word>
-        <p><br><br>If you see a line that looks like <span class="pre"><b>device&num;/:</b></span>, then you are ready to go to the next step.</p>
-        <p>If you see a line that looks like <span class="pre"><b>device&dollar;/:</b></span>, type <span class="pre"><b>su</b></span> and press enter.</p>
-        <p><br>You should now have a root shell on your Android device. If anything goes wrong, make sure you first <a href="">enable ADB with root access</a> and try again.</p>
-        <p><br></p>
-        <h1 class="adb">ADB shell commands</h1>
-        <p><br>Enter the following code in your terminal and press enter.</p>
-      </break-word> 
-      <pre><span class="pre adb comment">&num; set the variables</span><br>CHAOS_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.chaos\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;";<br><br>CHAOS_POLICIES_ACCESS=600;<br><br>CHAOS_POLICIES_UID=1000;<br><br>CHAOS_POLICIES_GID=1000;<br><br>CHAOS_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}";<br><br>CHAOS_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`;<br><br>CHAOS_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_PKG_PATH=`pm path com.github.yungtravla.lockscreen.chaos | grep -ao "/.*"`;<span class="pre adb comment"><br><br>&num; disable selinux</span><br>setenforce 0;<span class="pre adb comment"><br><br>&num; add lock-task-component and lock-task-feature</span><br><span class="pre adb comment">&num; then reset file permissions</span><br>echo -e "$CHAOS_POLICIES" &gt; /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chmod $CHAOS_POLICIES_ACCESS /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chown $CHAOS_POLICIES_UID /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chgrp $CHAOS_POLICIES_GID /data/system/device_policies.xml;<span class="pre adb comment"><br><br>&num; if current sdk version is 27 or lower</span><br><span class="pre adb comment">&num; then deny TOAST_WINDOW for user android</span><br>if [ $CHAOS_SDK_VERSION -lt 28 ]; then<br>&nbsp;&nbsp;appops set android TOAST_WINDOW deny;<br>fi;<span class="pre adb comment"><br><br>&num; set as system app</span><br>(mount -o rw,remount /system; <br>&nbsp;&nbsp;mount -o rw,remount /;<br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen;<br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; chmod 644 /system/app/ChaosLockscreen/base.apk \<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (mount -o ro,remount /system;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /);<span class="pre adb comment"><br><br>&num; toggle lockscreen to active</span><br>echo "$CHAOS_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chmod $CHAOS_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chown $CHAOS_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chgrp $CHAOS_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json;<span class="pre adb comment"><br><br>&num; re-enable selinux</span><br>setenforce 1;<br><br><span class="pre adb comment">&num; reboot</span><br>reboot;</pre>
+        <p>The simple installation method is recommended for new users. It's an automatic installer that adds a LockTask component for Chaos Lockscreen and installs the app as a system app on your device.<br><br>This installation process is executed in succession so your device will only reboot if the installation was successful.</p>
+        <label class="toggle-manual" for="toggle-manual">
+          <h3>MANUAL INSTALL</h3>
+          <p>(for advanced users)</p>
+        </label>
+        <input class="display-none" type="checkbox" id="toggle-manual">
+
+        <accordion-manual class="accordion">
+          <break-word>
+            <p><br></p>
+            <alert-red>
+              <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you follow these instructions you must first <a href="">enable ADB</a> on your Android device.</p>
+            </alert-red>
+            <p><br></p>
+            <h1 class="shell">Starting ADB</h1>
+            <p><br>To enable the Chaos Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>In order to send these to your device, you need to install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
+          </break-word>
+          <indent>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_windows.svg">Windows users</span></p>
+              <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
+              <p>Inside the command prompt, enter the following command.</p>
+            </break-word>
+            <pre>./adb.exe root &amp;&amp; ./adb.exe shell</pre>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_apple.svg">Mac users</span></p>
+              <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
+              <p>Inside the terminal window, enter the following command.</p>
+            </break-word>
+            <pre>./adb root &amp;&amp; ./adb shell</pre>
+            <break-word>
+              <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_linux.svg">Linux users</span></p>
+              <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
+              <p>Enter the following command.</p>
+            </break-word>
+            <pre>./adb root &amp;&amp; ./adb shell</pre>
+          </indent>
+          <break-word>
+            <p><br><br>If you see a line that looks like <span class="pre"><b>device:/&nbsp;&num;</b></span>, then you are ready to go to the next step. If you see a line that looks like <span class="pre"><b>device:/&nbsp;&dollar;</b></span>, type <span class="pre"><b>su</b></span> and press enter.</p>
+            <p><br>You should now have a root shell on your Android device. If anything goes wrong, make sure you first <a href="">enable ADB</a> and try again.</p>
+            <p><br>Continue to the next step.</p>
+            <p><br></p>
+            <h1 class="adb">ADB shell commands</h1>
+            <p><br>Enter the following code in your terminal and press enter.</p>
+          </break-word> 
+          <pre><span class="pre adb comment">&num; set the variables</span><br>CHAOS_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.chaos\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;";<br><br>CHAOS_POLICIES_ACCESS=600;<br><br>CHAOS_POLICIES_UID=1000;<br><br>CHAOS_POLICIES_GID=1000;<br><br>CHAOS_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}";<br><br>CHAOS_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`;<br><br>CHAOS_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`;<br><br>CHAOS_PKG_PATH=`pm path com.github.yungtravla.lockscreen.chaos | grep -ao "/.*"`;<span class="pre adb comment"><br><br>&num; disable selinux</span><br>setenforce 0;<span class="pre adb comment"><br><br>&num; add lock-task-component and lock-task-feature</span><br><span class="pre adb comment">&num; then reset file permissions</span><br>echo -e "$CHAOS_POLICIES" &gt; /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chmod $CHAOS_POLICIES_ACCESS /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chown $CHAOS_POLICIES_UID /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chgrp $CHAOS_POLICIES_GID /data/system/device_policies.xml;<span class="pre adb comment"><br><br>&num; if current sdk version is 27 or lower</span><br><span class="pre adb comment">&num; then deny TOAST_WINDOW for user android</span><br>if [ $CHAOS_SDK_VERSION -lt 28 ]; then<br>&nbsp;&nbsp;appops set android TOAST_WINDOW deny;<br>fi;<span class="pre adb comment"><br><br>&num; set as system app</span><br>(mount -o rw,remount /system; <br>&nbsp;&nbsp;mount -o rw,remount /;<br>&nbsp;&nbsp;mkdir /system/app/ChaosLockscreen;<br>&nbsp;&nbsp;cp $CHAOS_PKG_PATH /system/app/ChaosLockscreen/base.apk) \<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; chmod 644 /system/app/ChaosLockscreen/base.apk \<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp; (mount -o ro,remount /system;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /);<span class="pre adb comment"><br><br>&num; toggle lockscreen to active</span><br>echo "$CHAOS_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chmod $CHAOS_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chown $CHAOS_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chgrp $CHAOS_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.chaos/files/config.json;<span class="pre adb comment"><br><br>&num; re-enable selinux</span><br>setenforce 1;<br><br><span class="pre adb comment">&num; reboot</span><br>reboot;</pre>
+        </accordion-manual>
+      </break-word>
     </container>
   </body>
 </html>
