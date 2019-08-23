@@ -112,21 +112,21 @@
       html body container pre span.pre.adb.comment {
         color: rgb(0,255,167);
       }
-      html body container alert-black {
+      html body container alert-white {
         position: relative;
         display: block;
-        padding: 8pt 16pt 8pt 72pt;
-        background-color: rgb(0,0,0);
-        color: rgb(196,0,0);
+        padding: 8pt 16pt 8pt 80pt;
+        background-color: rgb(255,255,255);
+        color: rgb(0,0,0);
       }
-      html body container alert-black a {
-        color: rgb(255,0,0);
+      html body container alert-white a {
+        color: rgb(32,32,32);
         font-weight: 900;
       }
-      html body container alert-black p img {
+      html body container alert-white p img {
         position: absolute;
         top: 50%;
-        left: 8pt;
+        left: 16pt;
         margin-top: -24pt;
         width: 48pt;
         height: 48pt;
@@ -233,9 +233,10 @@
         </menu>
       </center>
       <break-word>
-        <!-- <alert-black>
+        <p><br></p>
+        <alert-white>
           <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_alert_triangle.svg">Before you begin the installation you must first <a href="">enable ADB</a> on your Android device.</p>
-        </alert-black> -->
+        </alert-white>
         <p><br></p>
         <h1>Installer</h1>
         <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Chaos Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is connect your phone and follow the prompts.</p>
@@ -268,7 +269,6 @@
       <hr>
 
       <break-word>
-        <p><br></p>
         <h1>Install with ADB</h1>
         <p><br>The ADB method is meant for advanced users to help with debugging.</p>
         <label class="toggle-manual" for="toggle-manual">
