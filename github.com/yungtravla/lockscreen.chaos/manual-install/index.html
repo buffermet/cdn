@@ -164,7 +164,7 @@
         margin-top: 16pt;
         margin-bottom: 16pt;
         padding: 8pt 16pt;
-        background-color: rgb(16,16,16);
+        background-color: rgba(255,255,255,0.094);
         color: rgb(255,255,255);
         font-weight: 200;
         user-select: none;
@@ -174,7 +174,7 @@
         border-radius: 4pt;
       }
       html body container label[class*=toggle-]:active {
-        background-color: rgb(32,32,32);
+        background-color: rgba(255,255,255,0.12);
       }
       html body container label[class*=toggle-] h3 {
         margin: 0;
@@ -298,7 +298,11 @@
             <break-word>
               <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.chaos/ic_linux.svg">Linux users</span></p>
               <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
-              <p>Enter the following command.</p>
+              <p>Now connect your Android device with a USB and enter the following command in the terminal.</p>
+            </break-word>
+            <pre>./adb restart && ./adb devices</pre>
+            <break-word>
+              <p>Accept the prompt on your connected Android device, then enter the following command in the terminal.</p>
             </break-word>
             <pre>./adb root &amp;&amp; ./adb shell</pre>
           </indent>
