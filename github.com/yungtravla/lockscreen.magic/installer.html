@@ -235,69 +235,38 @@
         <alert>
           <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_alert_triangle.svg">If your Android device is not rooted you must first <a href="">enable ADB with root access</a> before you can enable Magic Lockscreen.</p>
         </alert>
-        <break-word>
+        <p></p>
+        <alert>
+          <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_alert_check.svg">If your device is rooted you can skip these steps.</p>
+        </alert>
+        <p><br></p>
+        <p>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is follow the prompts.</p>
           <p><br></p>
-          <p>The ADB method is meant for advanced users to help with debugging.</p>
-          <p><br></p>
-          <h1 class="shell">Starting ADB</h1>
-          <p><br>To activate Magic Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>A LockTask component must be added to <span class="pre"><b>device_policies.xml</b></span> to enable seemless toggling of the LockTask state.<br><br>The app also needs to be installed as a system app to keep its screen on/off receivers persistent and to ensure that the lockscreen cannot be killed by holding the back button.<br><br>In order to do this you must install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
-        </break-word>
+          <h1 class="shell">Download the installer</h1>
         <indent>
-          <break-word>
             <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_windows.svg">Windows users</span></p>
-            <p>Open the unzipped folder and click <span class="pre"><b>File &gt; Open command prompt</b></span> at the top of your explorer window.</p>
-            <p>Make sure that your Android device is switched on and that <a href="">ADB is enabled</a>. Connect your device with a USB and enter the following command in the command prompt.</p>
-          </break-word>
-            <pre>./adb.exe restart && ./adb.exe devices</pre>
-          <break-word>
-            <p>Accept the prompt on your connected Android device, then enter the following command.</p>
-          </break-word>
-          <pre>./adb.exe root &amp;&amp; ./adb.exe shell</pre>
-          <break-word>
+            <a class="white" href=""><br>Download installer for Windows (2.5&nbsp;MB)</a>
             <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_apple.svg">Mac users</span></p>
-            <p>Open the unzipped folder and click on <span class="pre"><b>Finder &gt; Services &gt; New Terminal at Folder</b></span> at the top of your screen.</p>
-            <p>Make sure that your Android device is switched on and that <a href="">ADB is enabled</a>. Connect your device with a USB and enter the following command in the terminal.</p>
-          </break-word>
-          <pre>./adb restart && ./adb devices</pre>
-          <break-word>
-            <p>Accept the prompt on your connected Android device, then enter the following command.</p>
-          </break-word>
-          <pre>./adb root &amp;&amp; ./adb shell</pre>
-          <break-word>
+            <a class="white" href=""><br>Download installer for macOS (2.5&nbsp;MB)</a>
             <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_linux.svg">Linux users</span></p>
-            <p>Open a terminal and <span class="pre"><b>cd</b></span> to the unzipped folder.</p>
-            <p>Make sure that your Android device is switched on and that <a href="">ADB is enabled</a>. Connect your device with a USB and enter the following command in the terminal.</p>
-          </break-word>
-          <pre>./adb restart && ./adb devices</pre>
-          <break-word>
-            <p>Accept the prompt on your connected Android device, then enter the following command.</p>
-          </break-word>
-          <pre>./adb root &amp;&amp; ./adb shell</pre>
+            <a class="white" href=""><br>Download installer for Linux (2.5&nbsp;MB)</a>
         </indent>
-        <break-word>
-          <p><br></p>
-          <h1 class="adb">ADB shell commands</h1>
-          <p><br>If you see a line that looks like <span class="pre"><b>device:/&nbsp;&num;</b></span>, then you are ready to go to the next step. If you see a line that looks like <span class="pre"><b>device:/&nbsp;&dollar;</b></span>, type <span class="pre"><b>su</b></span> and press enter.</p>
-          <p><br>You should now have a root shell on your Android device. If anything goes wrong, make sure you first <a class="adb" href="">enable ADB with root access</a> and try again.</p>
-          <p><br>Copy and paste the following code into your terminal and press enter. If the installation was successful, your device will reboot.</p>
-        </break-word> 
-        <pre><span class="pre adb comment">&num; set variables</span><br>MAGIC_L_POLICIES="&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;\n&lt;policies setup-complete=\"true\"&gt;\n&lt;lock-task-component name=\"com.github.yungtravla.lockscreen.magic\" /&gt;\n&lt;lock-task-features value=\"31\" /&gt;\n&lt;/policies&gt;";<br><br>MAGIC_L_POLICIES_ACCESS=600;<br><br>MAGIC_L_POLICIES_UID=1000;<br><br>MAGIC_L_POLICIES_GID=1000;<br><br>MAGIC_L_CONFIG="{\"activated\":1,\"attempts\":3,\"attempts_left\":0,\"dots\":4,\"keys\":{\"0\":{},\"1\":{},\"2\":{}},\"limit_attempts\":0,\"lockout_duration\":10,\"locked_out_until\":0,\"method\":-1,\"role\":\"unlocked\",\"stealth\":0}";<br><br>MAGIC_L_CONFIG_ACCESS=`stat /data/data/com.github.yungtravla.lockscreen.magic/files/config.json | grep -aio "Access: [(][0-9]\{3\}/" | grep -ao "[0-9]\{3\}"`;<br><br>MAGIC_L_CONFIG_UID=`stat /data/data/com.github.yungtravla.lockscreen.magic/files/config.json | grep -ao "Uid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>MAGIC_L_CONFIG_GID=`stat /data/data/com.github.yungtravla.lockscreen.magic/files/config.json | grep -ao "Gid: [(][0-9]\{1,\}" | grep -ao "[0-9]\{1,\}"`;<br><br>MAGIC_L_SDK_VERSION=`getprop | grep -a "ro\.build\.version\.sdk" | grep -ao "[0-9]\{1,\}"`;<br><br>MAGIC_L_PKG_PATH=`pm path com.github.yungtravla.lockscreen.magic | grep -ao "/.*"`;<span class="pre adb comment"><br><br>&num; set lock-task-component and install as system app, reboot if succeeded</span><br>setenforce 0;<br>echo -e "$MAGIC_L_POLICIES" &gt; /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chmod $MAGIC_L_POLICIES_ACCESS /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chown $MAGIC_L_POLICIES_UID /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; chgrp $MAGIC_L_POLICIES_GID /data/system/device_policies.xml \<br>&nbsp;&nbsp;&amp;&amp; if [ $MAGIC_L_SDK_VERSION -lt 28 ]; then<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appops set android TOAST_WINDOW deny;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fi \<br>&nbsp;&nbsp;&amp;&amp; (mount -o rw,remount /system; <br>&nbsp;&nbsp;&nbsp;&nbsp;mount -o rw,remount /;<br>&nbsp;&nbsp;&nbsp;&nbsp;mkdir /system/app/MagicLockscreen;<br>&nbsp;&nbsp;&nbsp;&nbsp;cp $MAGIC_L_PKG_PATH /system/app/MagicLockscreen/base.apk) \<br>&nbsp;&nbsp;&amp;&amp; chmod 644 /system/app/MagicLockscreen/base.apk \<br>&nbsp;&nbsp;&amp;&amp; (mount -o ro,remount /system;<br>&nbsp;&nbsp;&nbsp;&nbsp;mount -o ro,remount /;<br>&nbsp;&nbsp;&nbsp;&nbsp;echo "$MAGIC_L_CONFIG" &gt; /data/data/com.github.yungtravla.lockscreen.magic/files/config.json) \<br>&nbsp;&nbsp;&amp;&amp; chmod $MAGIC_L_CONFIG_ACCESS /data/data/com.github.yungtravla.lockscreen.magic/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chown $MAGIC_L_CONFIG_UID /data/data/com.github.yungtravla.lockscreen.magic/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; chgrp $MAGIC_L_CONFIG_GID /data/data/com.github.yungtravla.lockscreen.magic/files/config.json \<br>&nbsp;&nbsp;&amp;&amp; (setenforce 1; reboot)</pre>
+        <p><br><br></p>
       </break-word>
-      <p><br></p>
 
       <hr>
 
       <break-word>
         <p><br></p>
-        <h1>Use installer instead of ADB</h1>
-        <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is follow the prompts.</p>
+        <h1>Install manually with ADB instead of installer</h1>
+        <p><br>The ADB method is meant for advanced users to help with debugging.</p>
         <a href="#">
-          <label class="toggle-auto" for="toggle-auto" onclick="document.querySector('input#toggle-manual').setAttribute('checked', 'false');">
-            <h3>DOWNLOAD INSTALLER</h3>
-            <p>(choose platform)</p>
+          <label class="toggle-manual" for="toggle-manual" onclick="document.querySector('input#toggle-auto').checked = false;">
+            <h3>INSTALL WITH ADB</h3>
+            <p>(advanced users)</p>
           </label>
         </a>
-        <input class="display-none" type="checkbox" id="toggle-auto">
+        <input class="display-none" type="checkbox" id="toggle-manual">
       </break-word>
 
       <p><br><br><br></p>
