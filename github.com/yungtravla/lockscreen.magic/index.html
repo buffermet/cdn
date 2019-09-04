@@ -235,7 +235,7 @@
         <p><br></p>
         <h1>Installer</h1>
         <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is connect your Android device and follow the prompts.</p>
-        <label class="toggle-auto" for="toggle-auto">
+        <label class="toggle-auto" for="toggle-auto" onclick="document.querySector('input#toggle-manual').setAttribute('checked', 'false');">
           <h3>DOWNLOAD INSTALLER</h3>
           <p>(choose platform)</p>
         </label>
@@ -264,9 +264,10 @@
       <hr>
 
       <break-word>
+        <p><br></p>
         <h1>Install with ADB</h1>
         <p><br>The ADB method is meant for advanced users to help with debugging.</p>
-        <label class="toggle-manual" for="toggle-manual">
+        <label class="toggle-manual" for="toggle-manual" onclick="document.querySector('input#toggle-auto').checked = false;">
           <h3>INSTALL WITH ADB</h3>
           <p>(advanced users)</p>
         </label>
@@ -276,7 +277,7 @@
           <break-word>
             <p><br></p>
             <h1 class="shell">Starting ADB</h1>
-            <p><br>To activate Magic Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>A LockTask component must be added to <span class="pre"><b>device_policies.xml</b></span> to enable seemless toggling of the LockTask state.<br><br>The app also needs to be installed as a system app to keep its screen on/off receivers persistent.<br><br>In order to do this you must install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
+            <p><br>To activate Magic Lockscreen you must enforce its locking capabilities by sending special instructions to your Android device with a USB.<br><br>A LockTask component must be added to <span class="pre"><b>device_policies.xml</b></span> to enable seemless toggling of the LockTask state.<br><br>The app also needs to be installed as a system app to keep its screen on/off receivers persistent and ensure that the lockscreen cannot be bypassed with a long press on the back button.<br><br>In order to do this you must install ADB (Android Debug Bridge) from Android's SDK platform tools.<br><br><br><a target="_blank" href="about:blank">Download SDK platform tools</a><br><br><br>When the download is complete, unzip the file and follow the instructions below.<br><br></p>
           </break-word>
           <indent>
             <break-word>
