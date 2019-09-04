@@ -77,6 +77,9 @@
       html body container a.adb {
         color: rgb(0,255,167);
       }
+      html body container span.red {
+        color: rgb(255,0,0);
+      }
       html body container span.shell {
         color: rgb(172,0,255);
       }
@@ -107,18 +110,18 @@
       html body container pre span.pre.adb.comment {
         color: rgb(0,255,167);
       }
-      html body container alert-white {
+      html body container alert {
         position: relative;
         display: block;
         padding: 8pt 16pt 8pt 80pt;
-        background-color: rgb(255,255,255);
-        color: rgb(0,0,0);
+        background-color: rgba(255,255,255,0.094);
+        color: rgb(255,255,255);
       }
-      html body container alert-white a {
-        color: rgb(0,0,0);
+      html body container alert a {
+        color: rgb(255,255,255);
         font-weight: 900;
       }
-      html body container alert-white p img {
+      html body container alert p img {
         position: absolute;
         top: 50%;
         left: 16pt;
@@ -229,9 +232,9 @@
       </center>
       <break-word>
         <p><br></p>
-        <alert-white>
+        <alert>
           <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_alert_triangle.svg">Before you can install Magic Lockscreen you must first <a href="">enable ADB</a> on your Android device.</p>
-        </alert-white>
+        </alert>
         <p><br></p>
         <h1>Installer</h1>
         <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is follow the prompts.</p>
