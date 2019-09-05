@@ -162,7 +162,7 @@
         -moz-user-select: none;
         -webkit-user-select: none;
       }
-      html body container label[class*=toggle-] {
+      html body container btn[class*=toggle-] {
         display: inline-block;
         margin-top: 16pt;
         margin-bottom: 16pt;
@@ -176,15 +176,15 @@
         cursor: pointer;
         border-radius: 4pt;
       }
-      html body container label[class*=toggle-]:active {
+      html body container btn[class*=toggle-]:active {
         background-color: rgba(255,255,255,0.12);
       }
-      html body container label[class*=toggle-] h3 {
+      html body container btn[class*=toggle-] h3 {
         margin: 0;
         padding: 0;
         font-size: 14pt;
       }
-      html body container label[class*=toggle-] p {
+      html body container btn[class*=toggle-] p {
         margin: 0;
         padding: 0;
         font-size: 11pt;
@@ -291,11 +291,11 @@
         <p><br></p>
         <h1>Use installer instead of ADB</h1>
         <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is follow the prompts.</p>
-        <a href="#">
-          <label class="toggle-auto" for="toggle-auto" onclick="document.querySector('input#toggle-manual').setAttribute('checked', 'false');">
+        <a href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/installer.html">
+          <btn class="toggle-auto">
             <h3>DOWNLOAD INSTALLER</h3>
             <p>(choose platform)</p>
-          </label>
+          </btn>
         </a>
         <input class="display-none" type="checkbox" id="toggle-auto">
       </break-word>
