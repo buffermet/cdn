@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 91.863341 91.863332"
+   width="496"
    height="496"
-   width="496">
+   viewBox="0 0 91.863341 91.863332"
+   version="1.1"
+   id="svg8">
   <defs
      id="defs2" />
   <metadata
@@ -24,13 +24,8 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="layer1"
-     transform="matrix(0.79999914,0,0,0.79999914,-1.4816161,-57.170458)">
-    <path
-       style="opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:21.33333397;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:22.40000153;stroke-opacity:1;paint-order:fill markers stroke"
-       d="M 320,106.66602 C 202.17875,106.66567 106.66567,202.17875 106.66602,320 106.66567,437.82125 202.17875,533.33433 320,533.33398 437.82125,533.33433 533.33433,437.82125 533.33398,320 533.33433,202.17875 437.82125,106.66567 320,106.66602 Z M 403.19922,249.59961 416,262.40039 l -128,128 -64,-64 12.80078,-12.80078 L 288,364.79883 Z"
-       transform="matrix(0.18520834,0,0,0.18520834,0,69.611127)"
-       id="path816" />
-  </g>
+  <path
+     id="path823"
+     d="M 45.931499,16.298334 A 29.633278,29.633449 0 0 0 16.298334,45.931669 29.633278,29.633449 0 0 0 45.931499,75.565003 29.633278,29.633449 0 0 0 75.565003,45.931669 29.633278,29.633449 0 0 0 45.931499,16.298334 Z m 12.381149,18.469922 2.435602,2.435617 -17.45515,17.455252 -2.435604,2.435957 -2.435602,-2.435957 -7.306807,-7.30685 2.435602,-2.435615 7.306807,7.306849 z"
+     style="opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.70227385;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:22.40000153;stroke-opacity:1;paint-order:fill markers stroke" />
 </svg>
