@@ -8,7 +8,9 @@
     <style>
       @font-face {
         font-family: "Ubuntu Bold";
-        src: url("../fonts/Ubuntu-Bold.ttf"));
+        src: url("./assets/fonts/Ubuntu-Bold.ttf"),
+        url('./assets/fonts/Ubuntu-Bold.ttf') format('woff2'),
+        url('./assets/fonts/Ubuntu-Bold.ttf') format('woff'););
       }
 
       html,
@@ -40,7 +42,6 @@
         float: left;
         margin-left: 24pt;
         font-family: "Ubuntu Bold";
-        font-weight: 700;
         font-size: 24pt;
         line-height: 1.4;
         text-align: left;
