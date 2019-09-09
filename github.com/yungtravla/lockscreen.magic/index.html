@@ -26,7 +26,8 @@
       }
       html body container {
         display: block;
-        max-width: 640pt;
+        width: 640pt;
+        max-width: calc(100% - 32pt);
         margin: auto;
         padding: 0 16pt;
         overflow: hidden;
@@ -198,7 +199,7 @@
         -webkit-user-select: none;
       }
       html body container center img.title {
-        width: 160pt;
+        width: 180pt;
         pointer-events: none;
         user-select: none;
         -moz-user-select: none;
@@ -324,7 +325,9 @@
           </g>
         </svg>
 
-        <p class="subtitle">turn your lockscreen<br>into a spellbook.</p>
+        <break-word>
+          <p class="subtitle">turn your lockscreen<br>into a spellbook.</p>
+        </break-word>
 
         <a href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/download.html">
           <img class="google-play" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/get_it_on_google_play.png">
