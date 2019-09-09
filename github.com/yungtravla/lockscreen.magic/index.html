@@ -6,6 +6,11 @@
   <head>
     <title>Enable manually</title>
     <style>
+      @font-face {
+        font-family: "Ubuntu Bold";
+        src: url("../fonts/Ubuntu-Bold.ttf") format("truetype"));
+      }
+
       html,
       body {
         max-width: 100%;
@@ -31,9 +36,20 @@
         max-width: 100%;
         pointer-events: none;
       }
+      html body container p.subtitle {
+        float: left;
+        margin-left: 24pt;
+        font-family: "Ubuntu Bold";
+        font-weight: 700;
+        font-size: 24pt;
+        line-height: 1.4;
+        text-align: left;
+      }
       html body container img.google-play {
         float: left;
         width: 160pt;
+        margin-left: 16pt;
+        margin-top: 8pt;
       }
       html body container .accordion {
         display: block;
@@ -281,7 +297,7 @@
                    y="188.30331"
                    x="62"
                    id="image9872"
-                   xlink:href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/rec01.gif"
+                   xlink:href="./assets/img/rec01.gif"
                    preserveAspectRatio="none"
                    height="2580"
                    width="1290" />
@@ -18179,6 +18195,7 @@
                   </g>
                 </g>
               </svg>
+              <p class="subtitle">turn your lockscreen<br>into a spellbook.</p>
               <a href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/download.html">
                 <img class="google-play" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/get_it_on_google_play.png">
               </a>
