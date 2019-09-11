@@ -6,8 +6,15 @@
 <meta name="msapplication-TileImage" content="./assets/img/ic_magic_icon_solid_round.svg">
 <html>
   <head>
-    <title>Enable manually</title>
+    <title>Magic Lockscreen</title>
     <style>
+      @font-face {
+        font-family: "Ubuntu Bold";
+        src: url("./assets/fonts/Ubuntu-Bold.ttf"),
+        url('./assets/fonts/Ubuntu-Bold.ttf') format('woff2'),
+        url('./assets/fonts/Ubuntu-Bold.ttf') format('woff'););
+      }
+
       html,
       body {
         max-width: 100%;
@@ -18,14 +25,46 @@
         color: rgb(255,255,255);
         font-family: sans-serif, helvetica, arial;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
+        overflow-x: hidden;
       }
       html body container {
         display: block;
-        max-width: 640pt;
+        width: 640pt;
+        max-width: calc(100vw - 32pt);
         margin: auto;
         padding: 0 16pt;
         overflow: hidden;
         word-break: break-all;
+      }
+      html body container div.banner-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        width: 520pt;
+      }
+      html body container div.banner-container svg.pixel-3 {
+        float: left;
+        width: 256pt;
+        max-width: calc(100vw - 32pt);
+        pointer-events: none;
+      }
+      html body container div.banner-container p.subtitle {
+        float: left;
+        margin-top: 32pt;
+        margin-left: 8pt;
+        margin-bottom: 16pt;
+        font-family: "Ubuntu Bold";
+        font-size: 24pt;
+        line-height: 1.4;
+        text-align: left;
+      }
+      html body container div.banner-container img.google-play {
+        float: left;
+        width: 160pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
       }
       html body container .accordion {
         display: block;
@@ -165,6 +204,13 @@
         -moz-user-select: none;
         -webkit-user-select: none;
       }
+      html body container center img.title {
+        width: 180pt;
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
       html body container btn[class*=toggle-] {
         display: inline-block;
         margin-top: 16pt;
@@ -199,6 +245,12 @@
       input[id=toggle-manual]:checked + accordion-manual {
         max-height: 9999pt;
       }
+      html body container img.screenshot {
+        width: 210pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
       a.white {
         color: rgb(255,255,255);
       }
@@ -213,12 +265,45 @@
       .display-none {
         display: none;
       }
+
+      @media screen  and (max-width: 520pt) {
+        html body container div.banner-container {
+          max-width: calc(100vw - 32pt);
+          text-align: center;
+        }
+        html body container div.banner-container svg.pixel-3 {
+          float: none;
+          display: inline-block;
+          width: 420pt;
+          max-width: calc(100vw - 32pt);
+          pointer-events: none;
+        }
+        html body container div.banner-container p.subtitle {
+          float: none;
+          margin-top: 16pt;
+          margin-left: 8pt;
+          margin-bottom: 24pt;
+          font-family: "Ubuntu Bold";
+          font-size: 24pt;
+          line-height: 1.4;
+          text-align: center;
+        }
+        html body container div.banner-container img.google-play {
+          float: none;
+          width: 160pt;
+          margin-bottom: 40pt;
+        }
+      }
     </style>
   </head>
   <body ontouchstart="">
     <container>
       <center>
-        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_magic_icon_solid_round.svg"></img>
+        <img class="logo" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_magic_icon_solid_round.svg">
+        <br>
+        <img class="title" src="./assets/img/title.svg">
+        <br>
+        <br>
         <menu>
           <break-word>
             <p>
@@ -231,47 +316,12 @@
               <a href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/uninstall.html">Uninstall</a>
             </p>
           </break-word>
+          <p><br></p>
         </menu>
       </center>
-      <break-word>
-        <p><br></p>
-        <alert>
-          <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_alert_triangle.svg">If your Android device is not rooted you must first <a href="">enable ADB with root access</a> before you can install Magic Lockscreen.</p>
-        </alert>
-        <p></p>
-        <alert>
-          <p><img src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_alert_check.svg">If your device is rooted you can skip the installation.</p>
-        </alert>
-          <p><br></p>
-          <h1>Download the installer</h1>
-          <p><br>The installer is recommended for new users. It automatically adds a LockTask component for Magic Lockscreen and installs it as a system app on your Android device.<br><br>All you have to do is follow the prompts.</p>
-          <p><br></p>
-        <indent>
-            <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_windows.svg">Windows users</span></p>
-            <a class="white" href=""><br>Download installer for Windows (2.5&nbsp;MB)</a>
-            <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_apple.svg">Mac users</span></p>
-            <a class="white" href=""><br>Download installer for macOS (2.5&nbsp;MB)</a>
-            <p><br><span class="shell"><img class="os-icon" src="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/assets/img/ic_linux.svg">Linux users</span></p>
-            <a class="white" href=""><br>Download installer for Linux (2.5&nbsp;MB)</a>
-        </indent>
-        <p><br><br></p>
-      </break-word>
-
-      <hr>
-
-      <break-word>
-        <p><br></p>
-        <h1>Install manually with ADB</h1>
-        <p><br>The ADB method is meant for advanced users to help with debugging.</p>
-        <a href="https://yungtravla.github.io/cdn/github.com/yungtravla/lockscreen.magic/install-manual.html">
-          <btn class="toggle-manual">
-            <h3>INSTALL WITH ADB</h3>
-          </btn>
-        </a>
-        <input class="display-none" type="checkbox" id="toggle-manual">
-      </break-word>
-
-      <p><br><br><br></p>
+      <img class="screenshot" src="./assets/img/shot01.png">
+      <img class="screenshot" src="./assets/img/shot02.png">
+      <img class="screenshot" src="./assets/img/shot03.png">
     </container>
   </body>
 </html>
