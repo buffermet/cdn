@@ -311,6 +311,8 @@
     </container>
   </body>
   <script>
-    if (window.scrollY == 0 && window.scrollX == 0) window.scrollTo(0,0);
+    window.addEventListener("load", function(){
+      if (window.scrollY == 0 && window.scrollX == 0) window.scrollTo(0,0);
+    });
   </script>
 </html>
