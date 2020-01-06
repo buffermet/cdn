@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" type="image/svg+xml" href="./assets/img/ic_magic_icon_solid_round.svg">
+<link rel="apple-touch-icon-precomposed" type="image/svg+xml" href="./assets/img/ic_magic_icon_solid_round.svg">
+<meta name="msapplication-TileImage" content="./assets/img/ic_magic_icon_solid_round.svg">
+<html>
+  <head>
+    <title>Magic Lockscreen</title>
+    <style>
+      @font-face {
+        font-family: "Roboto Condensed";
+        src: url("./assets/fonts/roboto-condensed-regular.ttf"),
+             url("./assets/fonts/roboto-condensed-regular.ttf") format("woff2");
+      }
+
+      html,
+      body {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(0,0,0);
+        color: rgb(255,255,255);
+        font-family: sans-serif, helvetica, arial;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        overflow-x: hidden;
+      }
+      html body container {
+        display: block;
+        width: 640pt;
+        max-width: calc(100vw - 32pt);
+        margin: auto;
+        padding: 0 16pt;
+        overflow: hidden;
+        word-break: break-all;
+      }
+      html body container div.banner-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        width: 520pt;
+      }
+      html body container div.banner-container svg.pixel-3 {
+        float: left;
+        width: 256pt;
+        max-width: calc(100vw - 32pt);
+        pointer-events: none;
+      }
+      html body container div.banner-container p.subtitle {
+        float: left;
+        margin-top: 32pt;
+        margin-left: 8pt;
+        margin-bottom: 16pt;
+        font-family: "Ubuntu Bold";
+        font-size: 24pt;
+        line-height: 1.4;
+        text-align: left;
+      }
+      html body container div.banner-container img.google-play {
+        float: left;
+        width: 160pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      html body container .accordion {
+        display: block;
+        max-height: 0pt;
+        overflow: hidden;
+      }
+      html body container break-word {
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+      html body container indent {
+        display: block;
+        margin-left: 48pt;
+      }
+      html body container a {
+        color: rgb(128,0,128);
+      }
+      html body container a:hover {
+        text-decoration: none;
+      }
+      html body container a:focus {
+        outline: none;
+      }
+      html body container p img {
+        height: 14pt;
+        vertical-align: middle;
+        margin-left: 2pt;
+      }
+      html body container p img.os-icon {
+        width: 24pt;
+        height: 24pt;
+        margin-left: -40pt;
+        margin-right: 16pt;
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      html body container p {
+        font-size: 14pt;
+      }
+      html body container h1 {
+        font-size: 24pt;
+        font-weight: normal;
+      }
+      html body container h1.shell {
+        color: rgb(128,0,128);
+      }
+      html body container h1.adb {
+        color: rgb(0,255,167);
+      }
+      html body container a.adb {
+        color: rgb(0,255,167);
+      }
+      html body container span.red {
+        color: rgb(255,0,0);
+      }
+      html body container span.shell {
+        color: rgb(128,0,128);
+      }
+      html body container span.adb {
+        color: rgb(0,255,167);
+      }
+      html body container p span.pre {
+        display: inline;
+        background-color: rgb(16,16,16);
+        border-radius: 2pt;
+        padding: 3pt 4pt;
+        line-height: 24pt;
+        font-size: 14pt;
+        color: rgb(128,128,128);
+      }
+      html body container pre {
+        background-color: rgb(16,16,16);
+        border-radius: 8pt;
+        padding: 16pt;
+        font-size: 14pt;
+        color: rgb(128,128,128);
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-all;
+      }
+      html body container pre span.pre.adb.comment {
+        color: rgb(0,255,167);
+      }
+      html body container alert p img {
+        position: absolute;
+        top: 50%;
+        left: 16pt;
+        margin-top: -24pt;
+        width: 48pt;
+        height: 48pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        pointer-events: none;
+      }
+      html body container center img.logo {
+        margin: 32pt 0 8pt 0;
+        width: 56pt;
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      html body container center img.title {
+        margin-bottom: 16pt;
+        width: 112pt;
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      html body container center menu {
+        padding: 0;
+        margin: 0 0 16pt 0;
+      }
+      html body container center menu p {
+        font-size: 12pt;
+        font-family: "Roboto Condensed";
+        color: rgb(255,255,255);
+        line-height: 2;
+        margin: 0;
+        padding: 0;
+      }
+      html body container center menu p a {
+        color: rgb(255,255,255);
+      }
+      html body container center menu p separator {
+        display: inline-block;
+        margin: -4pt 8pt;
+        width: 1pt;
+        height: 16pt;
+        background-color: rgb(32,32,32);
+      }
+      html body container btn[class*=toggle-] {
+        display: inline-block;
+        margin-top: 16pt;
+        margin-bottom: 16pt;
+        padding: 8pt 16pt;
+        background-color: rgba(255,255,255,0.094);
+        color: rgb(255,255,255);
+        font-weight: 200;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        cursor: pointer;
+        border-radius: 4pt;
+      }
+      html body container btn[class*=toggle-]:active {
+        background-color: rgba(255,255,255,0.12);
+      }
+      html body container btn[class*=toggle-] h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 14pt;
+      }
+      html body container btn[class*=toggle-] p {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        font-weight: 500;
+      }
+      input[id=toggle-auto]:checked + accordion-auto {
+        max-height: 9999pt;
+      }
+      input[id=toggle-manual]:checked + accordion-manual {
+        max-height: 9999pt;
+      }
+      html body container img.screenshot {
+        width: 210pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      html body container img.google-play {
+        display: block;
+        margin-top: 40pt;
+        margin-bottom: 40pt;
+        width: 160pt;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      a.white {
+        color: rgb(255,255,255);
+      }
+      hr {
+        height: 1pt;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(32,32,32);
+        border: none;
+      }
+      .display-none {
+        display: none;
+      }
+      a.footer {
+        display: inline-block;
+        margin: 0 0 16pt 0;
+        width: 100%;
+        color: #555;
+        font-size: 12pt;
+        font-family: "Roboto Condensed";
+        text-align: center;
+        text-decoration: none;
+      }
+      a.footer:hover {
+        color: #777;
+      }
+
+      @media screen  and (max-width: 520pt) {
+        html body container div.banner-container {
+          max-width: calc(100vw - 32pt);
+          text-align: center;
+        }
+        html body container div.banner-container svg.pixel-3 {
+          float: none;
+          display: inline-block;
+          width: 420pt;
+          max-width: calc(100vw - 32pt);
+          pointer-events: none;
+        }
+        html body container div.banner-container p.subtitle {
+          float: none;
+          margin-top: 16pt;
+          margin-left: 8pt;
+          margin-bottom: 24pt;
+          font-family: "Ubuntu Bold";
+          font-size: 24pt;
+          line-height: 1.4;
+          text-align: center;
+        }
+        html body container div.banner-container img.google-play {
+          float: none;
+          width: 160pt;
+          margin-bottom: 40pt;
+        }
+      }
+    </style>
+  </head>
+  <body ontouchstart="">
+    <container>
+      <center>
+        <img class="logo" src="https://buffermet.github.io/cdn/github.com/buffermet/buffermet.lockscreen.magic.demo/assets/img/ic_magic_icon_solid_round.svg">
+        <br>
+        <img class="title" src="./assets/img/title.svg">
+        <br>
+        <br>
+        <menu>
+          <break-word>
+            <p>
+              <a href="https://buffermet.github.io/cdn/github.com/buffermet/buffermet.lockscreen.magic.demo/index.html">Download</a>
+              <separator></separator>
+              <a href="https://buffermet.github.io/cdn/github.com/buffermet/buffermet.lockscreen.magic.demo/screenshots.html">Screenshots</a>
+              <separator></separator>
+              <a href="https://github.com/buffermet/buffermet.lockscreen.magic.demo/issues">Support</a>
+            </p>
+          </break-word>
+          <p><br></p>
+        </menu>
+      </center>
+      <center>
+        <img class="screenshot" src="./assets/img/shot01.png">
+        <img class="screenshot" src="./assets/img/shot02.png">
+        <img class="screenshot" src="./assets/img/shot03.png">
+        <img class="screenshot" src="./assets/img/shot04.png">
+        <a href="https://play.google.com/store/apps/details?id=buffermet.lockscreen.magic.demo">
+          <img class="google-play" src="https://buffermet.github.io/cdn/github.com/buffermet/buffermet.lockscreen.magic.demo/assets/img/get_it_on_google_play.png">
+        </a>
+        <a class="footer" target="_blank" href="https://buffermet.github.io/cdn/github.com/buffermet/buffermet.lockscreen.magic.demo/policy.html">privacy policy &amp; disclaimer</a>
+      </center>
+    </container>
+  </body>
+</html>
