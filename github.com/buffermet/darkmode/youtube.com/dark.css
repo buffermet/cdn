@@ -1,0 +1,15 @@
+#guide-content.ytd-app,
+a.ytd-mini-guide-entry-renderer,
+a.ytd-mini-guide-entry-renderer,
+ytd-mini-guide-renderer,
+ytd-watch-flexy[watch-color-update_],
+ytd-masthead,
+ytd-app,
+html {
+    background: #000 !important;
+}
+
+a.ytd-mini-guide-entry-renderer:hover,
+a.ytd-mini-guide-entry-renderer:hover {
+    background: #111 !important;
+}
