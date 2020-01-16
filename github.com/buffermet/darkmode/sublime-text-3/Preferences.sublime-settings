@@ -1,0 +1,31 @@
+{
+    "always_show_minimap_viewport": true,
+    "auto_complete_cycle": true,
+    "auto_upgrade": false,
+    "bold_folder_labels": true,
+    "caret_extra_top": 0,
+    "color_scheme": "Packages/User/Color Highlighter/themes/Agila Neon Monocyanide.tmTheme",
+    "font_face": "Ubuntu Mono",
+    "font_options":
+    [
+        "gray_antialias",
+        "subpixel_antialias"
+    ],
+    "font_size": 11,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "indent_guide_options":
+    [
+        "draw_normal",
+        "draw_active"
+    ],
+    "line_padding_bottom": 4,
+    "line_padding_top": 4,
+    "overlay_scroll_bars": "enabled",
+    "scroll_speed": 0,
+    "tab_size": 4,
+    "theme": "Glacier.sublime-theme",
+    "translate_tabs_to_spaces": true
+}
