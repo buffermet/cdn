@@ -1,5 +1,9 @@
 /* youtube */
 
+paper-dialog,
+#channel-header.ytd-c4-tabbed-header-renderer,
+#tabs-inner-container.ytd-c4-tabbed-header-renderer,
+ytd-browse[page-subtype=channels],
 ytd-app[is-watch-page],
 #guide-content.ytd-app,
 a.ytd-mini-guide-entry-renderer,
