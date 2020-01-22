@@ -1,5 +1,7 @@
 /* youtube */
 
+ytd-playlist-panel-renderer[watch-color-update_] .playlist-items.ytd-playlist-panel-renderer,
+ytd-playlist-panel-renderer[watch-color-update_] .header.ytd-playlist-panel-renderer,
 #card.ytd-miniplayer,
 paper-dialog,
 #channel-header.ytd-c4-tabbed-header-renderer,
