@@ -43,6 +43,7 @@ button.sc-button-responsive {
     border-color: #000 !important;
 }
 
+div.tagInput__wrapper,
 input[type=text],
 input[type=search] {
     background-color: #222 !important;
@@ -63,4 +64,8 @@ div.playControls {
         hsla(0,0%,100%,0),
         hsla(0,100%,0%,1) 90%,
         #000);
+}
+
+.sc-background-light {
+	background-color: #0a0a0a !important;
 }
