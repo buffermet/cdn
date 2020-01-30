@@ -58,9 +58,9 @@ div.playControls {
 }
 
 .truncatedAudioInfo.m-overflow.m-collapsed .truncatedAudioInfo__wrapper:after {
-    background: #000;
+	background: #000;
     background: linear-gradient(
-        hsla(0,0%,100%,0),
-        hsla(0,100%,0%,1) 90%,
-        #000);
+    	hsla(0,0%,100%,0),
+    hsla(0,100%,0%,1) 90%,
+    #000);
 }
