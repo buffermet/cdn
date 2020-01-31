@@ -4,11 +4,20 @@ header {
     background: rgb(6,6,6) !important;
 }
 
+body {
+    color: #fff;
+}
+
+div.tagInput__wrapper,
+input[type=text],
+input[type=search],
 input.commentForm__input {
     color: #fff !important;
 }
 
 
+.tabs__headingContainer,
+.tabs__tabs,
 a.sc-button.sc-button-white {
     background: #000;
 }
@@ -17,6 +26,8 @@ a.sc-button.sc-button-white {
     background: #111 !important;
 }
 
+div.audibleEditForm__form,
+div.audibleEditForm__audio,
 div.modal__modal,
 div#app,
 div.dropbar__content,
@@ -43,11 +54,23 @@ button.sc-button-responsive {
     border-color: #000 !important;
 }
 
-div.tagInput__wrapper,
-input[type=text],
-input[type=search] {
+div.tagInput__wrapper {
     background-color: #222 !important;
     border-color: #111 !important
+}
+
+input[type=date],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select,
+textarea {
+    background-color: #222 !important;
+    border-color: #111 !important;
+    color: #fff !important;
 }
 
 .modal.modalWhiteout {
