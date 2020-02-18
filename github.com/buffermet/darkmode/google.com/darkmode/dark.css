@@ -1,11 +1,11 @@
 td.LakcPb,
 td.fs5Qwd,
 form[role=search] input[type=text] {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 form[role=search] svg {
-    fill: #666;
+  fill: #666;
 }
 
 g-inner-card, 
@@ -16,7 +16,7 @@ span em,
 #res a div:nth-of-type(1), 
 form input[type=text], 
 div#bres div:first-child {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 div.RNNXgb,
@@ -26,14 +26,15 @@ g-left-button,
 g-right-button, 
 #hdtb-tls:hover, 
 a[href*='/imgres?imgurl'] {
-    background: #111 !important;
+  background: #111 !important;
 }
 
+.sfbg,
 div#fbar,
 body, 
 li.sbhl div[role=option], 
 .sbhl {
-    background: #000 !important;
+  background: #000 !important;
 }
 
 div.cUezCb,
@@ -47,7 +48,7 @@ div#bres div:first-child,
 /*g-inner-card div:nth-of-type(2), */
 div[jsl*='$t'] div:nth-of-type(1), 
 div#extabar {
-    background-color: #000 !important;
+  background-color: #000 !important;
 }
 
 div#rso a[ping*='/url']:not(.fl), 
@@ -55,44 +56,44 @@ a.link,
 #hdtb-msb .hdtb-mitem.hdtb-msel, 
 a.fl:link, 
 #hdtb .hdtb-mitem a:hover {
-    /* blue */
-    color: #1a73e8 !important;
+  /* blue */
+  color: #1a73e8 !important;
 }
 
 cite {
-    color: rgba(26, 115, 232, 0.5) !important;
+  color: rgba(26, 115, 232, 0.5) !important;
 }
 
 .s .st em, 
 .st.s.std em, 
 #res a div:nth-of-type(2) span:nth-of-type(1) {
-    color: #666 !important;
+  color: #666 !important;
 }
 
 .action-menu .mn-dwn-arw {
-    border-color: rgba(255,186,0,0.75) transparent !important;
+  border-color: rgba(255,186,0,0.75) transparent !important;
 }
 
 #hdtb-msb .hdtb-mitem.hdtb-msel {
-    /* blue */
-    border-color: #1a73e8 !important;
+  /* blue */
+  border-color: #1a73e8 !important;
 }
 
 div.RNNXgb,
 form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
-    border-color: #222;
+  border-color: #222;
 }
 
 #hptl a {
-    color: #888 !important;
+  color: #888 !important;
 }
 
 .tfB0Bf input[type="submit"] {
-    background-image: none !important;
-    background-color: #111 !important;
-    border: 1px solid #222 !important;
+  background-image: none !important;
+  background-color: #111 !important;
+  border: 1px solid #222 !important;
 }
 
 .tfB0Bf input[type="submit"]:hover {
-    color: #aaa !important;
+  color: #aaa !important;
 }
