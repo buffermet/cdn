@@ -2518,3 +2518,6 @@ div.signup-prompt-bg {
 div.jumbotron-codelines {
     background: url("/images/modules/site/heroes/simple-codelines.svg"), #000;
 }
+img.avatar.width-full.height-full.avatar-before-user-status {
+    width: calc(100% - 1px) !important;
+}
