@@ -1,7 +1,7 @@
+.pno7A.rfUaPd .Tqvz7b,
+.pno7A.hU1rMc .SwDSDf,
 .AOvabd,
 .dxp44d,
-.ab_button,
-.sh-sp__pswtr a.sh-sp__btn,
 #brs .med,
 .nrXPnc,
 .JNkvid .HnYYW,
@@ -19,6 +19,10 @@ form[role=search] svg {
   fill: #666;
 }
 
+.MEdqYd,
+.feqqG,
+.MEdqYd:hover,
+.feqqG:hover,
 .c274Wb,
 .GxwVnb,
 .ChlgHf .HnYYW,
@@ -33,6 +37,8 @@ div#bres div:first-child {
   color: #fff !important;
 }
 
+.MEdqYd,
+.feqqG,
 .zRQJhd {
   background: #222 !important;
 }
@@ -67,6 +73,7 @@ li.sbhl div[role=option],
   background: #000 !important;
 }
 
+.tR3EBc,
 .tX9u1b:hover .Rq5Gcb,
 .tX9u1b:hover,
 .sbibod {
@@ -113,6 +120,12 @@ cite {
   color: #666 !important;
 }
 
+
+.MEdqYd,
+.feqqG {
+  border: 1px solid #222 !important;
+}
+
 .action-menu .mn-dwn-arw {
   border-color: rgba(255,186,0,0.75) transparent !important;
 }
@@ -122,6 +135,9 @@ cite {
   border-color: #1a73e8 !important;
 }
 
+.TIGsTb,
+.MEdqYd,
+.feqqG,
 .AOvabd,
 .dxp44d,
 .vk_c,
@@ -131,7 +147,7 @@ cite {
 .sbibod,
 div.RNNXgb,
 form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
-  border-color: #222;
+  border-color: #222 !important;
 }
 
 #hptl a {
