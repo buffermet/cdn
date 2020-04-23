@@ -1,3 +1,5 @@
+.r9PaP,
+.wBIdUd,
 .WGvvNb,
 .tw-lp-search,
 .gt-is-lb,
@@ -20,6 +22,7 @@ form[role=search] input[type=text] {
   color: #fff !important;
 }
 
+.H1KrKd,
 form[role=search] svg {
   fill: #666;
 }
@@ -50,6 +53,9 @@ div#bres div:first-child {
   background: #222 !important;
 }
 
+.Ix6LGe,
+iframe ~ div,
+.aajZCb,
 .gt-is-itm,
 .AOvabd,
 .dxp44d,
@@ -58,8 +64,6 @@ div#bres div:first-child {
 .e7RZX,
 .cF4V5c,
 div.RNNXgb,
-form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2),
-form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(3) div:nth-of-type(2),
 g-left-button,
 g-right-button,
 #hdtb-tls:hover,
@@ -67,9 +71,14 @@ a[href*='/imgres?imgurl'] {
   background: #111 !important;
 }
 
+.XD1Bsc,
+.XD1Bsc:hover,
+.EHzcec,
+.ZXJQ7c:hover,
+.jq2rAe,
+.mye4qd,
 .Xy35sb,
 .zaokob,
-.EHzcec,
 .jZWadf,
 #topstuff .sh-sp__pswtr,
 .sh-sr__sponsored-row .sh-sp__pswtr,
@@ -78,24 +87,36 @@ a[href*='/imgres?imgurl'] {
 div.fLJSwc,
 div#fbar,
 body,
-li.sbhl div[role=option],
-.sbhl {
+li.sbhl div[role=option] {
   background: #000 !important;
 }
 
+.Hm7Qac:hover {
+  background-color: #ddd !important;
+}
+
+li.sbhl,
+li.sbhl:hover div[role=option],
+li.sbhl:hover,
 .DHcWmd {
   background-color: #222 !important;
 }
 
+.NQV3m:hover,
+.tX9u1b:hover,
+.tX9u1b:hover .Rq5Gcb,
+.PfSDnb:hover,
 .YcWSDf,
 .tw-lp-search,
 .tR3EBc,
-.tX9u1b:hover .Rq5Gcb,
-.tX9u1b:hover,
 .sbibod {
   background-color: #111 !important;
 }
 
+.qcTKEe,
+.NQV3m,
+.Pvpvv,
+.F9PbJd,
 #tw-target,
 .gt-is,
 .zRQJhd,
@@ -153,6 +174,8 @@ cite {
   border-color: #1a73e8 !important;
 }
 
+.FqnKTc,
+.F9PbJd,
 .YcWSDf,
 .vCOSGb,
 .TIGsTb,
@@ -166,7 +189,7 @@ cite {
 .zthhpf,
 .sbibod,
 div.RNNXgb,
-form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
+form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(3) div:nth-of-type(2) {
   border-color: #222 !important;
 }
 
@@ -193,4 +216,31 @@ form[role=search] div:nth-of-type(2) div:nth-of-type(1) div:nth-of-type(2) {
 
 .language_list_languages.tw-ll-top::after {
   background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,1)) !important;
+}
+
+.h312td {
+  background: rgba(0,0,0,0.75) !important;
+}
+
+.aajZCb {
+  border: 1px solid #222 !important;
+  border-top: none !important;
+}
+
+.SPmIAf {
+  color: rgba(255,255,255,0.54) !important;
+}
+
+.EHzcec {
+  box-shadow: none !important;
+}
+
+.igM9Le {
+  color: #000 !important;
+}
+
+.Hm7Qac,
+.GMjygd {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
