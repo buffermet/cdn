@@ -26,6 +26,7 @@ a.sc-button.sc-button-white {
     background: #111 !important;
 }
 
+.g-modal-section,
 div.audibleEditForm__form,
 div.audibleEditForm__audio,
 div.modal__modal,
@@ -54,6 +55,7 @@ button.sc-button-responsive {
     border-color: #000 !important;
 }
 
+.recipientChooser .tokenInput__wrapper,
 div.tagInput__wrapper {
     background-color: #222 !important;
     border-color: #111 !important
