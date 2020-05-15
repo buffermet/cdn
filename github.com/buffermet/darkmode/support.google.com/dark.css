@@ -1,0 +1,25 @@
+.hcfe {
+  color: #fff !important;
+}
+
+.page {
+  background-color: #070707 !important;
+}
+
+.material-card {
+  background: #000 !important;
+}
+
+footer,
+html.hcfe,
+.hcfe>header,
+.footer-notice,
+header.gb_sa {
+  background-color: #000 !important;
+}
+
+.thread-question {
+  box-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, .30),
+    0 1px 3px 1px rgba(0, 0, 0, .15) !important;
+}
