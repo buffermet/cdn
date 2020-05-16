@@ -1,0 +1,46 @@
+.navbits a,
+.post-text,
+.widget .widget_title H3,
+body {
+  color: #fff;
+}
+
+.userThanksInfo,
+textarea,
+#showthread-topsearch .search-input {
+  background-color: #111 !important;
+}
+
+.postbit-wrapper {
+  border-color: #111 !important;
+}
+
+.postbutton-row,
+.thead,
+.topRankedThreadsForumdisplay,
+.forum-head,
+.tcat,
+.panel,
+.panelsurround,
+.content,
+.alt1,
+.alt1Active,
+.alt2,
+.alt2Active,
+body {
+  background: #000 !important;
+}
+
+.new-button,
+INPUT[type="submit"],
+INPUT[type="reset"],
+INPUT.button,
+BUTTON,
+.navbits,
+.tagbar,
+.widget .widget_title H3,
+.widget,
+.post-content-container,
+#thread-header-bloglike {
+  background-color: #000 !important;
+}
