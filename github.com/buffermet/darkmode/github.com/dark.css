@@ -2535,3 +2535,6 @@ img.avatar.width-full.height-full.avatar-before-user-status {
 .SelectMenu-modal {
   border-color: #111 !important;
 }
+.form-control, .form-select {
+  background-color: #070707 !important;
+}
