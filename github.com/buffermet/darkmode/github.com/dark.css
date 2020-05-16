@@ -2505,6 +2505,7 @@ div.application-main div.container-xl > div.position-relative div[style] {
 }
 
 /* buffermet override */
+.SelectMenu-item,
 .SideNav,
 .SideNav-item:focus,
 .SideNav-item:hover,
@@ -2528,4 +2529,9 @@ div.jumbotron-codelines {
 }
 img.avatar.width-full.height-full.avatar-before-user-status {
   width: calc(100% - 1px) !important;
+}
+.SelectMenu-list,
+.SelectMenu-item,
+.SelectMenu-modal {
+  border-color: #111 !important;
 }
