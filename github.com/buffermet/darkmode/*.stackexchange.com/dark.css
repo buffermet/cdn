@@ -1,0 +1,27 @@
+.s-input,
+.s-textarea,
+body,
+#content {
+  background-color: #000 !important;
+}
+
+.nav-links .youarehere .nav-links--link {
+  background: #111 !important;
+}
+
+code,
+pre {
+  background-color: #111 !important;
+}
+
+.s-input,
+.s-textarea,
+html,
+body,
+.nav-links .youarehere .nav-links--link {
+  color: #fff !important;
+}
+
+body {
+  background-image: none !important;
+}
