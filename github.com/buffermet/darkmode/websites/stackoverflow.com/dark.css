@@ -1,3 +1,7 @@
+body {
+  background-image: none !important;
+}
+
 .s-input,
 .s-textarea,
 body,
@@ -13,19 +17,31 @@ body,
   background: #111 !important;
 }
 
+.top-bar .-secondary .-item .-link:hover,
+.s-btn__filled,
+.s-btn__muted:hover,
+.s-btn__muted:focus,
+.s-btn__muted:active,
+.s-btn__muted.is-selected,
+.post-tag,
+.geo-tag,
+.container .chosen-choices .search-choice,
+.container .chosen-container-multi .chosen-choices li.search-choice,
+.owner,
 code,
 pre {
   background-color: #111 !important;
 }
 
+.top-bar .-secondary .-item .-link:hover,
+.s-btn__muted:hover,
+.s-btn__muted:focus,
+.s-btn__muted:active,
+.s-btn__muted.is-selected,
 .s-input,
 .s-textarea,
 html,
 body,
 .nav-links .youarehere .nav-links--link {
   color: #fff !important;
-}
-
-body {
-  background-image: none !important;
 }
