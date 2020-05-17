@@ -1,0 +1,137 @@
+body {
+  background: #000 !important;
+}
+
+div.notices p:first-child:after,
+div.notices p:first-child:before {
+  color: #000 !important;
+}
+
+.featherlight .featherlight-content {
+  background: rgba(0,0,0,.67) !important;
+}
+
+.sidebar-hidden #overlay {
+  background: rgba(0,0,0,.5) !important;
+}
+
+#sidebar .searchbox {
+  background: rgba(0,0,0,.2) !important;
+}
+
+#sidebar .searchbox {
+  border-color: rgba(0,0,0,.1) !important;
+}
+
+#body .nav:hover {
+  background: #0a0a0a !important;
+}
+
+th,
+pre,
+code,
+#top-bar {
+  background: #111 !important;
+}
+
+td,
+table {
+  border-color: #111 !important;
+}
+
+.autocomplete-suggestions {
+  background: #222 !important;
+}
+
+.progress {
+  background-color: #222 !important;
+}
+
+code {
+  border-color: #222 !important;
+}
+
+.copy-to-clipboard {
+  background-color: #333 !important;
+}
+
+#body #breadcrumbs span {
+  border-color: #333 !important;
+}
+
+.copy-to-clipboard:hover {
+  background-color: #444 !important;
+}
+
+.progress,
+.autocomplete-suggestions {
+  border-color: #444 !important;
+}
+
+#body #breadcrumbs {
+  color: #444 !important;
+}
+
+div.notices.note p {
+  background: rgba(70,70,120,.1) !important;
+}
+
+div.notices.tip p {
+  background: rgba(80,140,80,.1) !important;
+}
+
+div.notices.warning p {
+  background: rgba(250,150,150,.1) !important;
+}
+
+div.notices.info p {
+  background: rgb(20,13,0) !important;
+}
+
+#sidebar ul li.active>a {
+  background: hsla(137,12%,8%,1) !important;
+}
+
+#sidebar,
+.timeline-Widget {
+  background-color: hsla(130,10%,15%,1) !important;
+}
+
+#sidebar #header-wrapper {
+  background: rgb(60,88,38) !important;
+}
+
+#sidebar #header-wrapper {
+  border-color: rgb(101, 113, 53) !important;
+}
+
+#sidebar .searchbox i {
+  color: rgb(101, 113, 53) !important;
+}
+
+#sidebar ul li.active>a,
+div.notices p,
+h1,
+code,
+.autocomplete-suggestion,
+.timeline-Header-title,
+.SandboxRoot,
+body {
+  color: #fff !important;
+}
+
+.copy-to-clipboard {
+  border: none !important;
+}
+
+.tooltipped:after {
+  background: rgba(255,255,255,.1) !important;
+}
+
+.tooltipped.tooltipped-s:before {
+  border-bottom-color: rgba(255,255,255,.1) !important;
+}
+
+.tooltipped.tooltipped-w:before {
+  border-left-color: rgba(255,255,255,.1) !important;
+}

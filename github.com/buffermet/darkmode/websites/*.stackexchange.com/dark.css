@@ -1,19 +1,79 @@
+.s-sidebarwidget__yellow,
 .s-input,
 .s-textarea,
-body,
-#content {
+#content,
+body {
   background-color: #000 !important;
+}
+
+.s-btn__muted:hover,
+.s-btn__muted:focus,
+.s-btn__muted:active {
+  background-color: #0a0a0a;
 }
 
 .nav-links .youarehere .nav-links--link {
   background: #111 !important;
 }
 
+.s-pagination--item:hover,
+.s-btn__muted.is-selected,
+.wmd-help-button.active-help,
+.mdhelp-tabs,
+.grippie,
+.s-notice__warning,
+.s-banner__warning,
+.s-sidebarwidget__yellow .s-sidebarwidget--header,
+.post-tag,
+.geo-tag,
+.container .chosen-choices .search-choice,
+.container .chosen-container-multi .chosen-choices li.search-choice,
 code,
 pre {
   background-color: #111 !important;
 }
 
+.grippie,
+.s-sidebarwidget__yellow:after,
+.wmd-button-bar,
+.s-input,
+.s-textarea,
+.wmd-button-row,
+.s-sidebarwidget__yellow .s-sidebarwidget--header,
+.s-sidebarwidget__yellow .s-sidebarwidget--content,
+.s-sidebarwidget__yellow {
+  border-color: #111 !important;
+}
+
+.post-tag,
+.s-notice__warning,
+.s-banner__warning {
+  border-color: #222 !important;
+}
+
+blockquote:before {
+  background: #222 !important;
+}
+
+.s-btn__filled {
+  background-color: #222 !important;
+}
+
+.s-label,
+.site-footer .-link {
+  color: #666 !important;
+}
+
+.s-pagination--item:hover,
+.s-btn__muted:hover,
+.s-btn__muted:focus,
+.s-btn__muted:active,
+.s-btn__muted.is-selected,
+.s-notice,
+.site-footer .-link:hover,
+.nav-links .nav-links--link:hover,
+.nav-links .nav-links--link:focus,
+.nav-links .nav-links--link:active,
 .s-input,
 .s-textarea,
 html,
