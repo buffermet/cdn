@@ -2505,6 +2505,10 @@ div.application-main div.container-xl > div.position-relative div[style] {
 }
 
 /* buffermet override */
+.AvatarStack-body {
+  background-color: transparent !important;
+}
+.user-status-circle-badge,
 .SelectMenu-item,
 .SideNav,
 .SideNav-item:focus,
@@ -2530,6 +2534,7 @@ div.jumbotron-codelines {
 img.avatar.width-full.height-full.avatar-before-user-status {
   width: calc(100% - 1px) !important;
 }
+.user-status-circle-badge,
 .SelectMenu-list,
 .SelectMenu-item,
 .SelectMenu-modal {
