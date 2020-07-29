@@ -2505,6 +2505,7 @@ div.application-main div.container-xl > div.position-relative div[style] {
 }
 
 /* buffermet override */
+.markdown-body img,
 .AvatarStack-body {
   background-color: transparent !important;
 }
