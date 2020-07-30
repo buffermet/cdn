@@ -2505,8 +2505,8 @@ div.application-main div.container-xl > div.position-relative div[style] {
 }
 
 /* buffermet override */
-.markdown-body img,
-.AvatarStack-body {
+.AvatarStack-body,
+.markdown-body img {
   background-color: transparent !important;
 }
 .user-status-circle-badge,
@@ -2524,6 +2524,9 @@ div.home-enterprise-wrapper:before {
 .SideNav-item[aria-current=page],
 .SideNav-item[aria-selected=true] {
   background-color: #0d0d0d;
+}
+.topic-tag {
+  background-color: #111;
 }
 div.signup-prompt-bg {
   background-image: none !important;
