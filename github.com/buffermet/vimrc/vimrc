@@ -1,12 +1,12 @@
 function! ToggleComment()
   let pos=getpos(".")
   let win=winsaveview()
-  if getline(".") =~ '\s*\/\/'
+  if getline(".") =~ '^\s*\/\/'
     normal! ^2x
-    let pos[2]-=2
-  else 
+    let pos[1]+=1
+  else
     normal! 0i//
-    let pos[2]+=2
+    let pos[1]+=1
   endif
   call winrestview(win)
   call setpos(".",pos)
