@@ -22,7 +22,6 @@ endfunction
 :colorscheme darkblue 
 :syntax on
 :au BufReadPost *.xm set syntax=objc
-:inoremap /* /*<Space><Space>*/<Left><Left><Left>
 :nnoremap <c-_> <Esc>:call ToggleComment()<CR>
 :inoremap <c-_> <Esc>:call ToggleComment()<CR>i
 :nnoremap <c-Up> <c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up>
