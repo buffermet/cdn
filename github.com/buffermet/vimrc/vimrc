@@ -20,6 +20,9 @@ endfunction
 :set whichwrap+=<,>,[,]
 :set backspace=indent,eol,start
 :colorscheme darkblue 
+highlight! StatusLine ctermbg=none ctermfg=green
+highlight! StatusLineNC ctermbg=none ctermfg=darkgrey
+highlight! VertSplit ctermbg=none ctermfg=darkgreen
 :syntax on
 :au BufReadPost *.xm set syntax=objc
 :nnoremap <c-_> <Esc>:call ToggleComment()<CR>
