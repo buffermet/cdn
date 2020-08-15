@@ -41,7 +41,7 @@ input::-webkit-input-placeholder {
 }
 /* main wrapper */
 ._4sp8 {
-	background-color: #1e1e1e !important;
+	background-color: #000000 !important;
 	color: #eee;
 }
 /* detail wrapper */
@@ -515,12 +515,27 @@ div._4-i2, div._5a8u {
 }
 
 /* @buffermet changes */
+/* buffermet comment: this stylesheet could be <20 lines i know */
 div.clearfix._o46._3erg._3i_m._nd_._3egs {
-	background-color: #1e1e1e;
+	background-color: #000000;
 }
 div._4qcs._5iwm._5iwn  {
 	background-color: #333;
 }
 ._3egs {
-	background: #1e1e1e;
+	background: #000000;
+}
+._li ._1enh {
+	background: #000000 !important;
+}
+._5irm._7mkm,
+._4rv3,
+._4_j4 .chatAttachmentShelf,
+._1ht1 {
+	background-color: #000 !important;
+}
+._kmc._7kpg ._1p1t {
+	/* wtf is this shit? */
+	color: white;
+	-webkit-text-fill-color: white;
 }
