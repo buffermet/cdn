@@ -2560,3 +2560,8 @@ img.avatar.width-full.height-full.avatar-before-user-status {
       rgb(16,16,32) 32%,
       rgb(24,24,40));
 }
+.Popover-message--bottom-left:after,
+.Popover-message--bottom-right:after,
+.Popover-message--bottom:after {
+  border-top-color: black;
+}
