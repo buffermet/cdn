@@ -2504,6 +2504,8 @@ div.application-main div.container-xl > div.position-relative div[style] {
   background-color: var(--body-color) !important;
 }
 
+
+
 /* buffermet override */
 .AvatarStack-body,
 .markdown-body img {
@@ -2545,7 +2547,7 @@ img.avatar.width-full.height-full.avatar-before-user-status {
   border-color: #111 !important;
 }
 .form-control, .form-select {
-  background-color: #070707 !important;
+  background-color: #171717 !important;
 }
 .SelectMenu-item[aria-checked=true] {
   color: #fff !important;
