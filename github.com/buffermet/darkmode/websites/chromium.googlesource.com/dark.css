@@ -1,0 +1,12 @@
+:root object,
+:root video,
+:root svg,
+:root img,
+:root {
+  background-color: #fff !important;
+  filter: invert(1) !important;
+}
+img[alt="Google Git"],
+:root body {
+  background-color: transparent !important;
+}
