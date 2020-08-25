@@ -2511,6 +2511,8 @@ div.application-main div.container-xl > div.position-relative div[style] {
 .markdown-body img {
   background-color: transparent !important;
 }
+.readme .markdown-body,
+.readme .plain,
 .user-status-circle-badge,
 .SelectMenu-item,
 .SideNav,
