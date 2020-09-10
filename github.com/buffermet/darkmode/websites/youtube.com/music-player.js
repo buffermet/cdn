@@ -26,7 +26,7 @@ const pollVideoNotification = () => {
 };
 
 const musicPlayer = () => {
-  if (document.querySelector("ytd-playlist-panel-renderer") {
+  if (document.querySelector("ytd-playlist-panel-renderer")) {
     document.querySelector("ytd-playlist-panel-renderer").style.maxHeight = "80vh";
     document.querySelector("ytd-playlist-panel-renderer div#container").style.maxHeight = "80vh";
   }
