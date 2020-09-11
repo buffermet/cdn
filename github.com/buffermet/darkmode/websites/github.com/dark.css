@@ -2552,7 +2552,7 @@ img.avatar.width-full.height-full.avatar-before-user-status {
   background-color: #171717 !important;
 }
 .menu-item,
-.SelectMenu-item[aria-checked=true] {
+.SelectMenu-item {
   color: #fff !important;
 }
 .signup-prompt-bg {
