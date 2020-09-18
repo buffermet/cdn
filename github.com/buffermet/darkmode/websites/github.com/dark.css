@@ -2555,6 +2555,9 @@ img.avatar.width-full.height-full.avatar-before-user-status {
 .SelectMenu-item {
   color: #fff !important;
 }
+.timeline-comment {
+  color: rgb(170,170,170);
+}
 .signup-prompt-bg {
   background-image: linear-gradient(
       180deg,
