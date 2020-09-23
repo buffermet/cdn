@@ -96,11 +96,12 @@ div.playControls {
 }
 
 /* Larger likes playlist */
-div.l-top.sc-border-box.g-z-index-fixed.sc-browsers-enable-gpu.l-inner-fullwidth {
-  height: 124px;
+div.l-top {
+  height: 124px !important;
 }
-a.playbackSoundBadge__titleLink.sc-truncate,
-a.playbackSoundBadge__titleLink.sc-truncate span:nth-of-type(1) {
-  width: 50px;
-  height = 50px;
+div.g-avatar-badge-avatar,
+div.g-avatar-badge-avatar div.image,
+div.g-avatar-badge-avatar span.sc-artwork {
+  width: 50px !important;
+  height: 50px !important;
 }
