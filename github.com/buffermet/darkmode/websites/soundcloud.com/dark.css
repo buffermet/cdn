@@ -8,6 +8,8 @@ body {
     color: #fff;
 }
 
+a.sc-link-dark,
+a:hover,
 div.tagInput__wrapper,
 input[type=text],
 input[type=search],
