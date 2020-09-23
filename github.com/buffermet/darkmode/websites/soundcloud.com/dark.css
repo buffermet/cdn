@@ -94,3 +94,13 @@ div.playControls {
 .sc-background-light {
 	background-color: #0a0a0a !important;
 }
+
+/* Larger likes playlist */
+div.l-top.sc-border-box.g-z-index-fixed.sc-browsers-enable-gpu.l-inner-fullwidth {
+  height: 124px;
+}
+a.playbackSoundBadge__titleLink.sc-truncate,
+a.playbackSoundBadge__titleLink.sc-truncate span:nth-of-type(1) {
+  width: 50px;
+  height = 50px;
+}
