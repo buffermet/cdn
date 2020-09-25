@@ -1,3 +1,5 @@
+div.card-section a,
+span em,
 .nDgy9d,
 div.St3GK a,
 a.fl,
@@ -13,10 +15,14 @@ a.fl,
 :root {
   filter: invert(1) !important;
 }
+div.card-section a,
 .nDgy9d,
 div.St3GK a,
 a.fl,
 #res h3,
 #botstuff h3 {
   color: #4385f4 !important;
+}
+span em {
+  color: #d18b00 !important;
 }
