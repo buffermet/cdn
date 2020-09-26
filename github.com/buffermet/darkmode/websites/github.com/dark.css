@@ -2,7 +2,6 @@
 .contrib-legend .legend,
 .user-status-circle-badge,
 .vcard-fullname,
-.f5,
 .select-menu-item-text,
 .branch-action-state-clean .branch-action-body:before,
 .branch-action-state-clean .branch-action-icon,
@@ -10,7 +9,6 @@
 .diffstat,
 .btn-danger,
 .IssueLabel,
-.TimelineItem-badge,
 .suggester li,
 header.Header .dropdown-menu-sw,
 .Label--green,
@@ -48,4 +46,7 @@ a.Header-link svg {
 }
 .branch-action-state-clean .branch-action-body {
   border-color: #cc2fa0;
+}
+.bg-red {
+  background-color: #2bc5b5 !important;
 }
