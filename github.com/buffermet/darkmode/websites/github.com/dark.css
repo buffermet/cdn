@@ -1,3 +1,8 @@
+.blob-code-addition,
+.blob-code-deletion,
+.blob-num {
+  filter: hue-rotate(180deg);
+}
 .repo-language-color,
 .contrib-legend .legend,
 .user-status-circle-badge,
@@ -31,6 +36,7 @@ header.Header,
 :root {
   filter: invert(1);
 }
+.blob-num.non-expandable,
 svg.octicon.octicon-plus,
 .dropdown-menu-sw,
 summary.Header-link img,
