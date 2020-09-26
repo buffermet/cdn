@@ -1,6 +1,6 @@
-.blob-code-addition,
-.blob-code-deletion,
-.blob-num {
+.pl-c1,
+.pl-s .pl-v,
+.tab-size[data-tab-size="8"] {
   filter: hue-rotate(180deg);
 }
 .repo-language-color,
