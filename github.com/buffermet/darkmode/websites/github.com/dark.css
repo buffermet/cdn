@@ -1,8 +1,15 @@
+.blob-code-hunk,
 .pl-c1,
 .pl-s .pl-v,
 .tab-size[data-tab-size="8"] {
   filter: hue-rotate(180deg);
 }
+.blob-num-expandable,
+.blob-num-hunk {
+  filter: hue-rotate(180deg) !important;
+}
+.user-status-container,
+.pb-3 .f5,
 .repo-language-color,
 .contrib-legend .legend,
 .user-status-circle-badge,
