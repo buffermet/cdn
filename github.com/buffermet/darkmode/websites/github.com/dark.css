@@ -1,3 +1,4 @@
+.IssueLabel,
 .TimelineItem-badge,
 .suggester li,
 header.Header .dropdown-menu-sw,
@@ -28,6 +29,7 @@ a.Header-link svg {
 .markdown-body img {
   background-color: black;
 }
-.markdown-body code, .markdown-body tt {
+.markdown-body code,
+.markdown-body tt {
   background-color: rgba(27,31,35,.125);
 }
