@@ -1,6 +1,7 @@
 .blob-code-hunk,
 .pl-c1,
 .pl-s .pl-v,
+.tab-size[data-tab-size="2"],
 .tab-size[data-tab-size="8"] {
   filter: hue-rotate(180deg);
 }
@@ -62,4 +63,7 @@ a.Header-link svg {
 }
 .bg-red {
   background-color: #2bc5b5 !important;
+}
+.bg-green {
+  background-color: #d857b4 !important;
 }
