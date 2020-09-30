@@ -1,3 +1,7 @@
+call plug#begin()
+Plug 'mg979/vim-visual-multi'
+call plug#end()
+
 function! ToggleComment()
   let pos=getpos(".")
   let win=winsaveview()
@@ -12,48 +16,53 @@ function! ToggleComment()
   call setpos(".",pos)
 endfunction   
 
-:set autoindent
-:set nowrap
-:set sidescroll=1
 :set number
-:set viminfo='20,<50,s10
+:set nowrap
 :set whichwrap+=<,>,[,]
 :set backspace=indent,eol,start
-:colorscheme darkblue 
-highlight! StatusLine ctermbg=none ctermfg=green
-highlight! StatusLineNC ctermbg=none ctermfg=darkgrey
-highlight! VertSplit ctermbg=none ctermfg=darkgreen
+:set fillchars=vert:\│
+:colorscheme darkblue
 :syntax on
+:syntax sync minlines=10000
 :au BufReadPost *.xm set syntax=objc
-:nnoremap <c-_> <Esc>:call ToggleComment()<CR>
-:inoremap <c-_> <Esc>:call ToggleComment()<CR>i
-:nnoremap <c-Up> <c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up>
-:vnoremap <c-Up> <c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up>
-:inoremap <c-Up> <c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up><c-Up>
-:nnoremap <c-Down> <c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down>
-:vnoremap <c-Down> <c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down>
-:inoremap <c-Down> <c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down><c-Down>
+:nnoremap ÷ <Esc>:call ToggleComment()<CR>i
+:inoremap ÷ <Esc>:call ToggleComment()<CR>i
+:nnoremap <S-Tab> <<
+:inoremap <S-Tab> <Esc><<i
+:nnoremap <Tab> >>
+:nnoremap <c-Up> 10<Up>
+:vnoremap <c-Up> 10<Up>
+:inoremap <c-Up> <Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>
+:nnoremap <c-Down> 10<Down>
+:vnoremap <c-Down> 10<Down>
+:inoremap <c-Down> <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>
+:nnoremap +2c8734ncty234hut3c4 10<Down>
+:vnoremap +2c8734ncty234hut3c4 10<Down>
+:inoremap +2c8734ncty234hut3c4 <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>
 :nnoremap <silent><c-x> :q<cr>
 :nnoremap <silent><c-s> :<c-u>update<cr>
 :vnoremap <silent><c-s> <c-c>:update<cr>gv
 :inoremap <silent><c-s> <c-o>:update<cr>
 :set mouse=a
 :set tabstop=2 shiftwidth=2 expandtab
+:set autoindent
 :inoremap " ""<Left>
 :inoremap ' ''<Left>
 :inoremap ` ``<Left>
-:inoremap { {<Enter><Tab><Enter>}<Left><Backspace><Backspace><Up><End>
-:inoremap [ []<Left>
 :inoremap ( ()<Left>
-:inoremap " ""<Left>
+:inoremap { {}<Left>
+:inoremap [ []<Left>
 :inoremap < <><Left>
 :inoremap ; <End>;
-:inoremap ++; ;
-:inoremap ++@interface @interface<Enter><Enter>@end<Up><Left>
-:inoremap ++@implementation @implementation<Enter><Enter>@end<Up><Left>
-:inoremap ++%hook<Space> %hook<Space><Enter><Enter>%end<Up><Left>
-:inoremap ++<script <script></script><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-:inoremap ++<html <html></html><Left><Left><Left><Left><Left><Left><Left>
-:inoremap ++<body <body></body><Left><Left><Left><Left><Left><Left><Left>
-:inoremap ++UIAlertView UIAlertView<Space>*<Space>alert<Space>=<Space>[[UIAlertView<Space>alloc]<Enter><Tab>initWithTitle:@""<Enter>message@""<Enter>delegate:nil<Enter>cancelButtonTitle:@"OK"<Enter>otherButtonTitles:nil];<Up><Up><Up><Up><Left>
+:inoremap +; ;
+:inoremap +@interface @interface<Space><Enter><Enter>@end<Up><Left>
+:inoremap +@implementation @implementation<Space><Enter><Enter>@end<Up><Left>
+:inoremap +%hook %hook<Space><Enter><Enter>%end<Up><Left>
+:inoremap +UIAlertView UIAlertView<Space>*<Space>alert<Space>=<Space>[[UIAlertView alloc]<Enter><Tab>initWithTitle:@""<Enter>message:@""<Enter>delegate:nil<Enter>cancelButtonTitle:@"OK"<Enter>otherButtonTitles:nil];<Enter><Backspace><Backspace>[alert<Space>show];
+:inoremap +NSLog NSLog(@"abla<Space>---<Space>%@",<Space>@"");<Left><Left><Left>
+:inoremap +NSRegularExpression NSRegularExpression<Space>*<Space>regexp<Space>=<Space>[NSRegularExpression<Enter><Tab>regularExpressionWithPattern:@""<Enter>options:NSRegularExpressionCaseInsensitive<Enter>error:nil];<Enter><Backspace><Backspace>str<Space>=<Space>[regexp<Enter><Tab>stringByReplacingMatchesInString:str<Enter>options:0<Enter>range:NSMakeRange(0,<Space>[str length])<Enter>withTemplate:@""];<Up><Up><Up><Up><Up><Up><Up><End><Left>
+:inoremap +@try @try<Space>{<Enter><Enter>}<Space>@catch(NSException<Space>*<Space>err)<Space>{<Enter><Tab>NSLog(@"abla<Space>%@<Space>%@",<Space>err.name,<Space>err.reason);<Enter><Backspace><Backspace>}
+:inoremap +dispatch_async dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,<Space>0),<Space>^(void){<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
+:inoremap +dispatch_once static<Space>dispatch_once_t<Space>onceToken;<Enter>dispatch_once(&onceToken,<Space>^{<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
+:inoremap +dispatch_semaphore dispatch_semaphore_t<Space>semaphore<Space>=<Space>dispatch_semaphore_create(0);<Enter>dispatch_semaphore_signal(semaphore);<Enter>if<Space>(![NSThread<Space>isMainThread])<Space>{<Enter><Tab>dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_FOREVER);<Enter><Backspace><Backspace>}<Space>else<Space>{<Enter><Tab>while<Space>(dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_NOW))<Space>{<Enter><Tab>[[NSRunLoop<Space>currentRunLoop]<Enter><Tab>runMode:NSDefaultRunLoopMode<Enter>beforeDate:[NSDate<Space>dateWithTimeIntervalSinceNow:0]];<Enter><Backspace><Backspace><Backspace><Backspace>}<Enter><Backspace><Backspace>}
 
