@@ -73,6 +73,14 @@ a.Header-link svg {
 .bg-red {
   background-color: #2bc5b5 !important;
 }
+.UnderlineNav-item.selected,
+.UnderlineNav-item[aria-current]:not([aria-current=false]),
+.UnderlineNav-item[role=tab][aria-selected=true] {
+  border-bottom-color: #0865d1;
+}
 .bg-green {
   background-color: #d857b4 !important;
+}
+.color-blue-3 {
+  color: #de9800 !important;
 }
