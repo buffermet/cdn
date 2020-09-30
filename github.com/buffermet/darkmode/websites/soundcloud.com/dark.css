@@ -8,6 +8,8 @@ body {
     color: #fff;
 }
 
+a.sc-link-dark,
+a:hover,
 div.tagInput__wrapper,
 input[type=text],
 input[type=search],
@@ -93,4 +95,15 @@ div.playControls {
 
 .sc-background-light {
 	background-color: #0a0a0a !important;
+}
+
+/* Larger likes playlist */
+div.l-top {
+  height: 124px !important;
+}
+div.g-avatar-badge-avatar,
+div.g-avatar-badge-avatar div.image,
+div.g-avatar-badge-avatar span.sc-artwork {
+  width: 50px !important;
+  height: 50px !important;
 }

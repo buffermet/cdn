@@ -1,0 +1,13 @@
+body,
+nav.localnav,
+.section-banner,
+.unit-wrapper {
+  filter: invert(1);
+}
+body,
+.unit-wrapper {
+  background: black;
+}
+main.main {
+  background: white;
+}

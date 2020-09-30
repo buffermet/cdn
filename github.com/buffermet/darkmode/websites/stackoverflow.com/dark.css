@@ -33,6 +33,12 @@ pre {
   background-color: #111 !important;
 }
 
+.s-prose code:not(.s-code-block) {
+  color: #999;
+}
+
+.pun,
+.pln,
 .top-bar .-secondary .-item .-link:hover,
 .s-btn__muted:hover,
 .s-btn__muted:focus,
