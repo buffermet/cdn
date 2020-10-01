@@ -14,6 +14,10 @@ header img.avatar.avatar-user,
 .blob-num-hunk {
   filter: hue-rotate(180deg) !important;
 }
+svg.octicon.d-inline-block.mt-1.float-left,
+svg.octicon.octicon-issue-opened.text-green,
+svg.octicon.octicon-issue-closed.text-red,
+svg.octicon.octicon-file-directory.color-blue-3,
 .dropdown-menu.flex-auto.rounded-1.bg-white.px-0.mt-0.pb-4.p-lg-4.position-relative.position-lg-absolute.left-0.left-lg-n4,
 a.mr-4,
 .py-7.py-md-8.py-lg-9.bg-gray-dark .col-12.col-lg-3.mx-auto.mx-lg-0.mb-3.mb-lg-0.mt-6.mt-lg-3,
@@ -56,6 +60,8 @@ header,
 :root {
   filter: invert(1);
 }
+svg.octicon,
+summary.btn.btn-primary,
 .blob-num.non-expandable,
 svg.octicon.octicon-plus,
 .dropdown-menu-sw,
@@ -91,4 +97,11 @@ a.Header-link svg {
 }
 header {
   filter: invert(1) hue-rotate(180deg);
+}
+aside img.avatar {
+  filter: hue-rotate(0deg);
+}
+details-menu.SelectMenu img.avatar,
+summary img.avatar {
+  filter: invert(1) hue-rotate(180deg) !important;
 }
