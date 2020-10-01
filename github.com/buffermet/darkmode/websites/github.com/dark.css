@@ -7,6 +7,7 @@ span.text-red.text-bold,
 .tab-size[data-tab-size="8"] {
   filter: hue-rotate(180deg);
 }
+header img.avatar.avatar-user,
 .blob-num-expandable,
 .blob-num-hunk {
   filter: hue-rotate(180deg) !important;
@@ -85,4 +86,7 @@ a.Header-link svg {
 }
 .color-blue-3 {
   color: #de9800 !important;
+}
+header {
+  filter: invert(1) hue-rotate(180deg);
 }
