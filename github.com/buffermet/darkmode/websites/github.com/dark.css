@@ -14,6 +14,7 @@ header img.avatar.avatar-user,
 .blob-num-hunk {
   filter: hue-rotate(180deg) !important;
 }
+span.d-flex.anim-grow-x.progress-bar.mt-1,
 svg.octicon.d-inline-block.mt-1.float-left,
 svg.octicon.octicon-issue-opened.text-green,
 svg.octicon.octicon-issue-closed.text-red,
@@ -22,7 +23,9 @@ svg.octicon.octicon-issue-closed.closed,
 svg.octicon.octicon-git-pull-request.open,
 svg.octicon.octicon-git-pull-request.closed,
 svg.octicon.octicon-git-merge.merged,
+svg.octicon.octicon-tag.flex-shrink-0.mt-1.text-green,
 svg.octicon.octicon-check.v-align-middle,
+svg.octicon.octicon-dot-fill.mr-2,
 svg.octicon.octicon-file-directory.color-blue-3,
 .dropdown-menu.flex-auto.rounded-1.bg-white.px-0.mt-0.pb-4.p-lg-4.position-relative.position-lg-absolute.left-0.left-lg-n4,
 a.mr-4,
@@ -66,6 +69,7 @@ header,
 :root {
   filter: invert(1);
 }
+header.pagehead.orghead.border-bottom-0.pt-0.pt-lg-3,
 svg.octicon,
 summary.btn.btn-primary,
 .blob-num.non-expandable,
@@ -110,4 +114,8 @@ aside img.avatar {
 details-menu.SelectMenu img.avatar,
 summary img.avatar {
   filter: invert(1) hue-rotate(180deg) !important;
+}
+.js-calendar-graph.mx-md-2.mx-3.d-flex.flex-column.flex-items-end.flex-xl-items-center.overflow-hidden.pt-1.is-graph-loading.graph-canvas.calendar-graph.height-full.text-center,
+ul.legend li {
+  filter: invert(1) hue-rotate(90deg)
 }
