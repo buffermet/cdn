@@ -45,10 +45,14 @@ a.fl,
 :root svg,
 :root img,
 :root {
-  filter: invert(1) !important;
+  filter: invert(1);
 }
 
 g-left-button,
 g-right-button {
   filter: invert(.1);
+}
+
+.WaWKOe img {
+  filter: none;
 }
