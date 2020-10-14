@@ -30,6 +30,7 @@ endfunction
 :nnoremap <S-Tab> <<
 :inoremap <S-Tab> <Esc><<i
 :nnoremap <Tab> >>
+:vnoremap <Tab> >>
 :nnoremap <c-Up> 10<Up>
 :vnoremap <c-Up> 10<Up>
 :inoremap <c-Up> <Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>
