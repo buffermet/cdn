@@ -1,3 +1,5 @@
+body > div.application-main > div > main > div.container-xl.clearfix.new-discussion-timeline.px-3.px-md-4.px-lg-5 > div > div.position-relative.border-top.clearfix > div > div > div.col-12.col-md-9.col-lg-10.px-md-3.py-md-4.release-main-section.commit.open.float-left > details > div.Box.Box--condensed.mt-3,
+details-dialog.Box.d-flex.flex-column.anim-fade-in.fast.Box--overlay,
 details,
 details g-emoji,
 span.text-red.text-bold,
@@ -14,8 +16,14 @@ header img.avatar.avatar-user,
 .blob-num-hunk {
   filter: hue-rotate(180deg) !important;
 }
+span.text-white.State--green.rounded-1.ml-2.px-1,
+.TimelineItem-badge.bg-purple.text-white,
+.TimelineItem-badge.text-white.bg-gray-dark,
+.pre-mergability .text-green,
 span.d-flex.anim-grow-x.progress-bar.mt-1,
 svg.octicon.d-inline-block.mt-1.float-left,
+svg.octicon.octicon-mark-github.text-white,
+svg.octicon.octicon-git-pull-request.text-green,
 svg.octicon.octicon-issue-opened.text-green,
 svg.octicon.octicon-issue-closed.text-red,
 svg.octicon.octicon-issue-opened.open,
@@ -69,6 +77,10 @@ header,
 :root {
   filter: invert(1);
 }
+body > div.application-main > div > main > div.container-xl.clearfix.new-discussion-timeline.px-3.px-md-4.px-lg-5 > div > div.position-relative.border-top.clearfix > div > div > div.col-12.col-md-9.col-lg-10.px-md-3.py-md-4.release-main-section.commit.open.float-left > div.release-header > p,
+body > div.application-main > div > main > div.container-xl.clearfix.new-discussion-timeline.px-3.px-md-4.px-lg-5 > div > div.position-relative.border-top.clearfix > div > div > div.col-12.col-md-9.col-lg-10.px-md-3.py-md-4.release-main-section.commit.open.float-left > div.release-header > p > a.d-inline-block > img,
+.Box.Box--danger summary.btn.btn-danger.boxed-action,
+.Box.Box--danger button.btn.btn-danger,
 header.pagehead.orghead.border-bottom-0.pt-0.pt-lg-3,
 svg.octicon,
 summary.btn.btn-primary,
@@ -90,6 +102,10 @@ a.Header-link svg {
 }
 .branch-action-state-clean .branch-action-body {
   border-color: #cc2fa0;
+}
+.Box--danger, .Box--danger .Box-body:last-of-type,
+.Box--danger .Box-row:first-of-type {
+  border-color: #2bc5b5;
 }
 .bg-red {
   background-color: #2bc5b5 !important;
@@ -118,4 +134,9 @@ summary img.avatar {
 .js-calendar-graph.mx-md-2.mx-3.d-flex.flex-column.flex-items-end.flex-xl-items-center.overflow-hidden.pt-1.is-graph-loading.graph-canvas.calendar-graph.height-full.text-center,
 ul.legend li {
   filter: invert(1) hue-rotate(90deg)
+}
+.Box.Box--danger .btn-danger.disabled,
+.Box.Box--danger .btn-danger:disabled,
+.Box.Box--danger .btn-danger[aria-disabled=true] {
+  color: rgba(52,219,206,.5);
 }
