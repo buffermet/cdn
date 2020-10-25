@@ -28,6 +28,7 @@ endfunction
 :nnoremap ÷ <Esc>:call ToggleComment()<CR>i
 :inoremap ÷ <Esc>:call ToggleComment()<CR>i
 :nnoremap <S-Tab> <<
+:vnoremap <S-Tab> <<
 :inoremap <S-Tab> <Esc><<i
 :nnoremap <Tab> >>
 :vnoremap <Tab> >>
