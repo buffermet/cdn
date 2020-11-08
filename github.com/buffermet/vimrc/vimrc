@@ -31,7 +31,7 @@ endfunction
 :vnoremap <S-Tab> <<
 :inoremap <S-Tab> <Esc><<i
 :nnoremap <Tab> >>
-:vnoremap <Tab> >>
+:vnoremap <Tab> >><Esc>
 :nnoremap <c-Up> 10<Up>
 :vnoremap <c-Up> 10<Up>
 :inoremap <c-Up> <Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>
@@ -56,6 +56,8 @@ endfunction
 :inoremap [ []<Left>
 :inoremap < <><Left>
 :inoremap ; <End>;
+:nnoremap ; i<End>;
+:vnoremap ; <Esc>i<End>;
 :inoremap +; ;
 :inoremap +@interface @interface<Space><Enter><Enter>@end<Up><Left>
 :inoremap +@implementation @implementation<Space><Enter><Enter>@end<Up><Left>
