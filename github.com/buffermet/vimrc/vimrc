@@ -16,6 +16,7 @@ function! ToggleComment()
   call setpos(".",pos)
 endfunction   
 
+:let g:netrw_altv=1
 :set number
 :set nowrap
 :set whichwrap+=<,>,[,]
