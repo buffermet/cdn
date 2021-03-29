@@ -1,0 +1,4 @@
+/* Remove mini player button */
+button.ytp-miniplayer-button.ytp-button {
+  display: none;
+}
