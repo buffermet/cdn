@@ -1,0 +1,27 @@
+:root {
+  --tv-color-pane-background: #000;
+}
+html.theme-dark .columnHeader-aXihB3Rm,
+html.theme-dark .item-2IihgTnv,
+html.theme-dark .menuWrap-g78rwseC,
+html.theme-dark .ch-input,
+html.theme-dark .dialog-UM6w7sFp,
+html.theme-dark .trading-panel-content-3q5skKoi,
+html.theme-dark .trading-panel-spinner-3q5skKoi,
+html.theme-dark .tv-floating-toolbar,
+html.theme-dark #bottom-area .bottom-widgetbar-content,
+html.theme-dark .tv-dome-panel,
+html.theme-dark .wrap-1a1_EyKG,
+html.theme-dark .orderPanel-3pDzJA5U,
+html.theme-dark .panelContainer-3pDzJA5U,
+html.theme-dark .toolbar-OvhMiobx.isGrayed-OvhMiobx,
+html.theme-dark .chart-data-window .chart-data-window-header,
+html.theme-dark .widgetbar-widgetheader,
+html.theme-dark .chart-data-window,
+html.theme-dark .button-DABaJZo4.isGrayed-DABaJZo4,
+html.theme-dark .symbol-EJ_LFrif,
+html.theme-dark .separator-3W5vLB8V.selected-3W5vLB8V .innerWrapper-3W5vLB8V,
+html.theme-dark .separator-3W5vLB8V,
+html.theme-dark .widgetbar-widget {
+  background-color: #000;
+}
