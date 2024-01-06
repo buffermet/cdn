@@ -4,6 +4,9 @@ html {
 	background-color: white;
 	filter: invert() hue-rotate(180deg);
 }
+.sc-classic .header {
+	background-color: black;
+}
 div.profileHeaderBackground__visual,
 div.chart-container,
 header[role=banner],
