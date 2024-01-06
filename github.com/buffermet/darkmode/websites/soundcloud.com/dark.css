@@ -2,7 +2,6 @@
 
 html {
 	background-color: white;
-	filter: invert() hue-rotate(180deg);
 }
 .sc-classic .header {
 	background-color: black;
@@ -13,6 +12,7 @@ header[role=banner],
 [aria-role=img],
 div.fullHero,
 video,
+html,
 img {
 	filter: invert() hue-rotate(180deg);
 }
