@@ -10,7 +10,7 @@ span.artistNavigationItem__name {
 	color: black;
 }
 div.profileHeaderBackground__visual,
-div.userAvatarBadge__image,
+.userAvatarBadge__image,
 div.chart-container,
 [aria-role=img],
 #app > header,
