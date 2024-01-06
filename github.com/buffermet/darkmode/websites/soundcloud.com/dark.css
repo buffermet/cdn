@@ -3,23 +3,29 @@
 html {
 	background-color: white;
 }
-.sc-classic .header {
+#app > header {
 	background-color: black;
 }
+span.artistNavigationItem__name {
+	color: black;
+}
 div.profileHeaderBackground__visual,
+div.userAvatarBadge__image,
 div.chart-container,
-header[role=banner],
 [aria-role=img],
+#app > header,
 div.fullHero,
 video,
 html,
 img {
 	filter: invert() hue-rotate(180deg);
 }
-header[role=banner] [aria-role=img],
+#app > header [aria-role=img],
 div.fullHero [aria-role=img] {
 	filter: unset;
 }
-span.artistNavigationItem__name {
+div.artistShortcutsModal {
 	color: black;
+	background-color: white;
+	background-image: none;
 }
