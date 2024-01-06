@@ -5,14 +5,12 @@ html {
 	filter: invert() hue-rotate(180deg);
 }
 div.profileHeaderBackground__visual,
+div.chart-container,
 header[role=banner],
 [aria-role=img],
+div.fullHero,
 video,
 img {
-	filter: invert() hue-rotate(180deg);
-}
-div.fullHero,
-div.chart-container {
 	filter: invert() hue-rotate(180deg);
 }
 header[role=banner] [aria-role=img],
