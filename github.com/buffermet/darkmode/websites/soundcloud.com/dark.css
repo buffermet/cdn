@@ -20,3 +20,6 @@ header[role=banner] [aria-role=img],
 div.fullHero [aria-role=img] {
 	filter: unset;
 }
+span.artistNavigationItem__name {
+	color: black;
+}
