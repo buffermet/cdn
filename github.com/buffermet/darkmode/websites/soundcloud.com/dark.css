@@ -1,109 +1,21 @@
 /* soundcloud */
 
-header {
-    background: rgb(6,6,6) !important;
+html {
+	background-color: white;
+	filter: invert() hue-rotate(180deg);
 }
-
-body {
-    color: #fff;
+div.profileHeaderBackground__visual,
+header[role=banner],
+[aria-role=img],
+video,
+img {
+	filter: invert() hue-rotate(180deg);
 }
-
-a.sc-link-dark,
-a:hover,
-div.tagInput__wrapper,
-input[type=text],
-input[type=search],
-input.commentForm__input {
-    color: #fff !important;
+div.fullHero,
+div.chart-container {
+	filter: invert() hue-rotate(180deg);
 }
-
-
-.tabs__headingContainer,
-.tabs__tabs,
-a.sc-button.sc-button-white {
-    background: #000;
-}
-
-.uploadLoggedOut__testimonials {
-    background: #111 !important;
-}
-
-.g-modal-section,
-div.audibleEditForm__form,
-div.audibleEditForm__audio,
-div.modal__modal,
-div#app,
-div.dropbar__content,
-div.playControls__inner,
-div.playControls__elements,
-div.sc-button-group,
-div.sound__soundActions,
-div.volume__sliderWrapper,
-div.searchTitle,
-div.l-top,
-div.dialog,
-html,
-body {
-    background-color: #000 !important;
-}
-
-div.commentForm__wrapper,
-.playControls__inner, .playControls__bg,
-ul.userNetworkTabs,
-div.listenEngagement,
-input.commentForm__input,
-button.sc-button-responsive {
-    background-color: #000 !important;
-    border-color: #000 !important;
-}
-
-.recipientChooser .tokenInput__wrapper,
-div.tagInput__wrapper {
-    background-color: #222 !important;
-    border-color: #111 !important
-}
-
-input[type=date],
-input[type=email],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=url],
-select,
-textarea {
-    background-color: #222 !important;
-    border-color: #111 !important;
-    color: #fff !important;
-}
-
-.modal.modalWhiteout {
-    background-color: rgba(0,0,0,0.8);
-}
-
-div.playControls {
-    z-index: 9999999;
-}
-
-.truncatedAudioInfo.m-overflow.m-collapsed .truncatedAudioInfo__wrapper:after {
-    background: #000;
-    background: linear-gradient(
-        hsla(0,0%,100%,0),
-        hsla(0,100%,0%,1) 90%,
-        #000);
-}
-
-.sc-background-light {
-	background-color: #0a0a0a !important;
-}
-
-/* Larger likes playlist */
-div.l-top {
-  height: 124px !important;
-}
-div.g-avatar-badge-avatar,
-div.g-avatar-badge-avatar div.image,
-div.g-avatar-badge-avatar span.sc-artwork {
-  width: 50px !important;
-  height: 50px !important;
+header[role=banner] [aria-role=img],
+div.fullHero [aria-role=img] {
+	filter: unset;
 }
