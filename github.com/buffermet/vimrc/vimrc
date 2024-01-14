@@ -1,3 +1,16 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.git
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
 call plug#begin()
 Plug 'mg979/vim-visual-multi'
 call plug#end()
@@ -15,6 +28,13 @@ function! ToggleComment()
   call winrestview(win)
   call setpos(".",pos)
 endfunction   
+
+autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=NONE
+  \ | hi Normal ctermfg=WHITE guifg=WHITE
+  \ | hi VertSplit ctermbg=NONE
+  \ | hi EndOfBuffer ctermfg=black
+  \ | hi Pmenu ctermbg=8
+  \ | hi PmenuSel ctermfg=black
 
 :let g:netrw_altv=1
 :set number
@@ -47,7 +67,9 @@ endfunction
 :vnoremap <silent><c-s> <c-c>:update<cr>gv
 :inoremap <silent><c-s> <c-o>:update<cr>
 :set mouse=a
-:set tabstop=2 shiftwidth=2 expandtab
+:set tabstop=4
+:set shiftwidth=4
+":set expandtab
 :set autoindent
 :inoremap " ""<Left>
 :inoremap ' ''<Left>
@@ -70,11 +92,6 @@ endfunction
 :inoremap +dispatch_async dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,<Space>0),<Space>^(void){<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
 :inoremap +dispatch_once static<Space>dispatch_once_t<Space>onceToken;<Enter>dispatch_once(&onceToken,<Space>^{<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
 :inoremap +dispatch_semaphore dispatch_semaphore_t<Space>semaphore<Space>=<Space>dispatch_semaphore_create(0);<Enter>dispatch_semaphore_signal(semaphore);<Enter>if<Space>(![NSThread<Space>isMainThread])<Space>{<Enter><Tab>dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_FOREVER);<Enter><Backspace><Backspace>}<Space>else<Space>{<Enter><Tab>while<Space>(dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_NOW))<Space>{<Enter><Tab>[[NSRunLoop<Space>currentRunLoop]<Enter><Tab>runMode:NSDefaultRunLoopMode<Enter>beforeDate:[NSDate<Space>dateWithTimeIntervalSinceNow:0]];<Enter><Backspace><Backspace><Backspace><Backspace>}<Enter><Backspace><Backspace>}
-
-autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=NONE
-  \ | hi Normal ctermfg=WHITE guifg=WHITE
-  \ | hi VertSplit ctermbg=NONE
-  \ | hi EndOfBuffer ctermfg=black
 
 set fillchars+=vert:\ 
 
