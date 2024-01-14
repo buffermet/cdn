@@ -29,15 +29,16 @@ function! ToggleComment()
   call setpos(".",pos)
 endfunction   
 
-autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=NONE
-  \ | hi Normal ctermfg=WHITE guifg=WHITE
-  \ | hi VertSplit ctermbg=NONE
+autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
+  \ | hi Normal ctermfg=white guifg=white
+  \ | hi VertSplit ctermbg=none
   \ | hi EndOfBuffer ctermfg=black
   \ | hi Pmenu ctermbg=8 ctermfg=white
   \ | hi PmenuSel ctermfg=15 ctermbg=red
   \ | hi StatusLine ctermbg=3
   \ | hi StatusLineNC ctermbg=none ctermfg=white
   \ | hi CursorLine ctermbg=3 ctermfg=black
+  \ | hi Folded ctermbg=none
 
 :let g:netrw_altv=1
 :set number
