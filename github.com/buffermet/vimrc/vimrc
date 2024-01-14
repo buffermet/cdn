@@ -33,8 +33,8 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=NONE
   \ | hi Normal ctermfg=WHITE guifg=WHITE
   \ | hi VertSplit ctermbg=NONE
   \ | hi EndOfBuffer ctermfg=black
-  \ | hi Pmenu ctermbg=8
-  \ | hi PmenuSel ctermfg=black
+  \ | hi Pmenu ctermbg=8 ctermfg=white
+  \ | hi PmenuSel ctermfg=15
 
 :let g:netrw_altv=1
 :set number
