@@ -10,7 +10,6 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 call plug#begin()
 Plug 'mg979/vim-visual-multi'
 call plug#end()
@@ -54,7 +53,7 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :inoremap ÷ <Esc>:call ToggleComment()<CR>i
 :nnoremap <S-Tab> <<
 :vnoremap <S-Tab> <<<Esc>
-:inoremap <S-Tab> <Esc><<i
+:inoremap <S-Tab> <C-d>
 :nnoremap <Tab> >>
 :vnoremap <Tab> >><Esc>
 :nnoremap <c-Up> 10<Up>
