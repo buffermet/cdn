@@ -1,3 +1,7 @@
+" Run the command below if your Shift+Tab unindent gets screwed up by YouCompleteMe.
+"
+" [[ -d ~/.vim && -d ~/.vim/bundle && -d ~/.vim/bundle/YouCompleteMe && -z `grep 'inoremap <S-Tab> <C-d>' ~/.vim/bundle/YouCompleteMe/autoload/youcompleteme.vim` ]] && sed -i ':a;N;$!ba;s/\(inoremap.*StopCompletion.*\n.*\n\)/\1  inoremap <S-Tab> <C-d>\n/m' ~/.vim/bundle/YouCompleteMe/autoload/youcompleteme.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -26,10 +30,10 @@ function! ToggleComment()
   endif
   call winrestview(win)
   call setpos(".",pos)
-endfunction   
+endfunction
 
 autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
-  \ | hi Normal ctermfg=white guifg=white
+  \ | hi Normal ctermbg=none
   \ | hi VertSplit ctermbg=none
   \ | hi EndOfBuffer ctermfg=black
   \ | hi Pmenu ctermbg=8 ctermfg=white
@@ -51,11 +55,6 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :au BufReadPost *.xm set syntax=objc
 :nnoremap ÷ <Esc>:call ToggleComment()<CR>i
 :inoremap ÷ <Esc>:call ToggleComment()<CR>i
-:nnoremap <S-Tab> <<
-:vnoremap <S-Tab> <<<Esc>
-:inoremap <S-Tab> <C-d>
-:nnoremap <Tab> >>
-:vnoremap <Tab> >><Esc>
 :nnoremap <c-Up> 10<Up>
 :vnoremap <c-Up> 10<Up>
 :inoremap <c-Up> <Up><Up><Up><Up><Up><Up><Up><Up><Up><Up>
@@ -74,6 +73,11 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :set shiftwidth=4
 ":set expandtab
 :set autoindent
+:nnoremap <S-Tab> <<
+:vnoremap <S-Tab> <<<Esc>
+:inoremap <S-Tab> <C-d>
+:nnoremap <Tab> >>
+:vnoremap <Tab> >><Esc>
 :inoremap " ""<Left>
 :inoremap ' ''<Left>
 :inoremap ` ``<Left>
