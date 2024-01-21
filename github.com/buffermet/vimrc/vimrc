@@ -2,6 +2,7 @@
 "
 " #!/bin/bash
 " YCMPATH=~/.vim/bundle/YouCompleteMe;
+" [[ ! -d $YCMPATH ]] && echo $YCMPATH does not exist.;
 " [[ -d $YCMPATH && -z `grep 'inoremap <S-Tab> <C-d>' $YCMPATH/autoload/youcompleteme.vim` ]] \
 "   && sed \
 "     -i ':a;N;$!ba;s/\(inoremap.*StopCompletion.*\n.*\n\)/\1  inoremap <S-Tab> <C-d>\n/m' \
