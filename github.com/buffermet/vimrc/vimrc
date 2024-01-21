@@ -1,6 +1,11 @@
-" Run the command below if your Shift+Tab unindent gets screwed up by YouCompleteMe.
+" Run this bash script if your Shift+Tab unindent gets screwed up by YouCompleteMe.
 "
-" [[ -d ~/.vim && -d ~/.vim/bundle && -d ~/.vim/bundle/YouCompleteMe && -z `grep 'inoremap <S-Tab> <C-d>' ~/.vim/bundle/YouCompleteMe/autoload/youcompleteme.vim` ]] && sed -i ':a;N;$!ba;s/\(inoremap.*StopCompletion.*\n.*\n\)/\1  inoremap <S-Tab> <C-d>\n/m' ~/.vim/bundle/YouCompleteMe/autoload/youcompleteme.vim
+" #!/bin/bash
+" YCMPATH=~/.vim/bundle/YouCompleteMe;
+" [[ -d $YCMPATH && -z `grep 'inoremap <S-Tab> <C-d>' $YCMPATH/autoload/youcompleteme.vim` ]] \
+"   && sed \
+"     -i ':a;N;$!ba;s/\(inoremap.*StopCompletion.*\n.*\n\)/\1  inoremap <S-Tab> <C-d>\n/m' \
+"     $YCMPATH/autoload/youcompleteme.vim;
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
