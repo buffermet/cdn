@@ -47,7 +47,7 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
   \ | hi StatusLine ctermbg=3
   \ | hi StatusLineNC ctermbg=none ctermfg=white
   \ | hi CursorLine ctermbg=3 ctermfg=black
-  \ | hi Folded ctermbg=none
+  \ | hi Folded ctermbg=none ctermfg=3
 
 :let g:netrw_altv=1
 :set number
