@@ -7,7 +7,6 @@
 .member_b44d5d,
 .theme-dark .scroller__4b984,
 .privateChannels__93473,
-.userPanelInnerThemed__1804b,
 .container_b2ce9c,
 .content_d67847,
 .container__5c7e7,
@@ -16,7 +15,8 @@
 }
 
 .theme-dark .form__13a2c:before,
-.theme-dark .children__32014:after {
+.theme-dark .children__32014:after,
+.userPanelInnerThemed__1804b {
 	background: black;
 }
 
