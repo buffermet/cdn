@@ -26,3 +26,7 @@
 [class*=themedBackground__] {
 	background: #171717;
 }
+
+[class*=memberInner__] [class*=content_] {
+	background: unset;
+}
