@@ -1,31 +1,26 @@
-.wrapper_a7e7a8,
-.theme-dark .container__590e2,
-.theme-dark .container_ca50b9,
-.chatContent__5dca8,
-.theme-dark .themed_b152d4,
-.members__9f47b,
-.member_b44d5d,
-.theme-dark .scroller__4b984,
-.privateChannels__93473,
-.container_b2ce9c,
-.content_d67847,
-.container__5c7e7,
-.container__0a6a9,
-.page__0b66e,
-.theme-dark .container__7590f,
-.sidebarRegionScroller__1fa7e,
-.contentRegionScroller__86c79,
-.scroller__52680,
-.reaction_fef95b {
+[class*=wrapper_]:nth-of-type(1),
+[class*=chatContent__],
+.theme-dark [class*=themed_],
+[class*=members__],
+[class*=member_],
+[class*=privateChannels__],
+[class*=container_],
+[class*=content_],
+[class*=container__],
+[class*=page__],
+[class*=sidebarRegionScroller__],
+[class*=contentRegionScroller__],
+[class*=scroller__],
+[class*=reaction_] {
 	background-color: black;
 }
 
-.theme-dark .form__13a2c:before,
-.theme-dark .children__32014:after,
-.userPanelInnerThemed__1804b {
+.theme-dark [class*=form__]:before,
+.theme-dark [class*=children__]:after,
+[class*=userPanelInnerThemed__] {
 	background: black;
 }
 
-.themedBackground__6b1b6 {
+[class*=themedBackground__] {
 	background: #171717;
 }
