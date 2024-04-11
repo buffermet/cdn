@@ -11,6 +11,7 @@
 [class*=sidebarRegionScroller__],
 [class*=contentRegionScroller__],
 [class*=scroller__],
+.theme-dark [class*=scroller__],
 [class*=reaction_] {
 	background-color: black;
 }
