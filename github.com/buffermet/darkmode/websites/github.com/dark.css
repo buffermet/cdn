@@ -1,0 +1,14 @@
+body,
+.AppHeader,
+section[aria-labelledby],
+.color-bg-default,
+.bgColor-default,
+html[data-color-mode=dark] .feed-background,
+.feed-item-content {
+	background-color: black !important;
+}
+
+.color-bg-subtle,
+.bgColor-muted {
+	background-color: hsl(214 13% 7% / 1);
+}
