@@ -1,25 +1,3 @@
-/* youtube */
-
-ytd-playlist-panel-renderer[watch-color-update_] .playlist-items.ytd-playlist-panel-renderer,
-ytd-playlist-panel-renderer[watch-color-update_] .header.ytd-playlist-panel-renderer,
-#card.ytd-miniplayer,
-paper-dialog,
-#channel-header.ytd-c4-tabbed-header-renderer,
-#tabs-inner-container.ytd-c4-tabbed-header-renderer,
-ytd-browse[page-subtype=channels],
-ytd-app[is-watch-page],
-#guide-content.ytd-app,
-a.ytd-mini-guide-entry-renderer,
-a.ytd-mini-guide-entry-renderer,
-ytd-mini-guide-renderer,
-ytd-watch-flexy[watch-color-update_],
-ytd-masthead,
-ytd-app,
-html {
-    background: #000 !important;
-}
-
-a.ytd-mini-guide-entry-renderer:hover,
-a.ytd-mini-guide-entry-renderer:hover {
-    background: #111 !important;
+ytd-app[darker-dark-theme] {
+	background: black;
 }
