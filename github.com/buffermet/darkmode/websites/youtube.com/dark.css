@@ -1,3 +1,10 @@
-ytd-app[darker-dark-theme] {
+ytd-app[darker-dark-theme],
+ytd-mini-guide-renderer,
+#masthead {
 	background: black;
+}
+
+html[dark],
+[dark] {
+	--yt-spec-base-background: black;
 }
