@@ -1,13 +1,11 @@
 let highestSeconds = 0
 
-const rxStripDecimals = /\..*/
-
 const nextButton = document.querySelector("button[aria-label='Next video']")
 const prevButton = document.querySelector("button[aria-label='Previous video']")
 
 const loop = () => {
     const video = document.querySelector("#shorts-player > div.html5-video-container > video")
-    const seconds = parseInt(video.currentTime.toString().replace(rxStripDecimals, ""))
+    const seconds = parseInt(video.currentTime)
     if (seconds > highestSeconds) {
         highestSeconds = seconds
     } else if (seconds < highestSeconds) {
