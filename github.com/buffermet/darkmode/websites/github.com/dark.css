@@ -4,10 +4,13 @@ section[aria-labelledby],
 .color-bg-default,
 .bgColor-default,
 html[data-color-mode=dark] .feed-background,
-.feed-item-content {
+.feed-item-content,
+.gh-header,
+.discussion-timeline-actions {
 	background-color: black !important;
 }
 
+.timeline-comment,
 .Box {
 	background-color: hsl(214 13% 7% / 1);
 }
