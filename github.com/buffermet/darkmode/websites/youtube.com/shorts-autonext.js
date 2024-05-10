@@ -16,11 +16,13 @@ const loop = () => {
 }
 
 let loopId = setInterval(loop, 200)
+let timeoutId = 0
 
 const resetLoop = () => {
 	clearInterval(loopId)
+	clearTimeout(timeoutId)
 	highestSeconds = 0
-	setTimeout(() => loopId = setInterval(loop, 200), 1000)
+	timeoutId = setTimeout(() => loopId = setInterval(loop, 200), 1000)
 }
 
 nextButton.addEventListener("click", resetLoop)
