@@ -16,5 +16,6 @@ html[data-color-mode=dark] .feed-background,
 }
 
 [data-color-mode="dark"][data-dark-theme="dark_dimmed"], [data-color-mode="dark"][data-dark-theme="dark_dimmed"] ::backdrop, [data-color-mode="auto"][data-light-theme="dark_dimmed"], [data-color-mode="auto"][data-light-theme="dark_dimmed"] ::backdrop {
+	--bgColor-default: black;
 	--bgColor-muted: hsl(214 13% 7% / 1);
 }
