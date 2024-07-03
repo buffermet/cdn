@@ -31,3 +31,8 @@
 [class*=memberInner__] [class*=content_] {
 	background: unset;
 }
+
+.theme-dark {
+	--background-primary: black;
+	--background-secondary: black;
+}
