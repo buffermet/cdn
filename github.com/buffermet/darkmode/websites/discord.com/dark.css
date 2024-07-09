@@ -1,38 +1,11 @@
-[class*=wrapper_]:nth-of-type(1),
-[class*=chatContent_],
-.theme-dark [class*=themed_],
-[class*=members__],
-[class*=member_],
-[class*=privateChannels__],
-[class*=content_],
-[class*=container_],
-.theme-dark [class*=container_],
-[class*=page__],
-[class*=sidebarRegionScroller__],
-[class*=contentRegionScroller__],
-[class*=scroller__],
-.theme-dark [class*=scroller__],
-[class*=reaction_] {
-	background-color: black;
-}
-
-.theme-dark [class*=form_]:before,
-.theme-dark [class*=children_]:after,
-[class*=userPanelInnerThemed__] {
-	background: black;
-}
-
-[class*=modeSelected_] [class*=link_],
-[class*=modeSelected_]:hover [class*=link_],
-[class*=themedBackground__] {
-	background: #171717;
-}
-
-[class*=memberInner__] [class*=content_] {
-	background: unset;
-}
-
 .theme-dark {
-	--background-primary: black;
-	--background-secondary: black;
+    --background-primary: black;
+    --background-secondary: black;
+    --background-alt: black;
+    --background-tertiary: black;
+    --channeltextarea-background: rgb(16,16,16);
+}
+
+.theme-dark .container_b2ca13 {
+    background: black;
 }
