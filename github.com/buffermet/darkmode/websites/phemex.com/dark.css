@@ -6,10 +6,6 @@
     --B3: #111;
 }
 
-.box.H-1t6ml1m,
-div[role=toolbar],
-html.theme-dark .chart-page,
-html.theme-dark .group-gmpTgcxI,
-html.theme-dark #layout-size-sensor {
+.box.H-1t6ml1m {
     background: black;
 }
