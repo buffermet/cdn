@@ -1,0 +1,9 @@
+html,
+body,
+.bg-token-main-surface-primary {
+    background: black;
+}
+
+.dark\:bg-token-main-surface-secondary:is(.dark *) {
+    background: rgba(255,255,255,0.05)
+}
