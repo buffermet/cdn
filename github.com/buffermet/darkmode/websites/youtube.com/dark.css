@@ -8,3 +8,7 @@ html[dark],
 [dark] {
 	--yt-spec-base-background: black;
 }
+
+#cinematics > div > div {
+	opacity: 0;
+}
