@@ -1,25 +1,3 @@
-" Run this bash script if your Shift+Tab unindent gets screwed up by YouCompleteMe.
-"
-" #!/bin/bash
-" YCMPATH=~/.vim/bundle/YouCompleteMe;
-" [[ ! -d $YCMPATH ]] && echo $YCMPATH does not exist.;
-" [[ -d $YCMPATH && -z `grep 'inoremap <S-Tab> <C-d>' $YCMPATH/autoload/youcompleteme.vim` ]] \
-"   && sed \
-"     -i ':a;N;$!ba;s/\(inoremap.*StopCompletion.*\n.*\n\)/\1  inoremap <S-Tab> <C-d>\n/m' \
-"     $YCMPATH/autoload/youcompleteme.vim;
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.git
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
 call plug#begin()
 Plug 'mg979/vim-visual-multi'
 call plug#end()
