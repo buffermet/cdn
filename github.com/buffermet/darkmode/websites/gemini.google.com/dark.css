@@ -1,0 +1,13 @@
+/* https://gemini.google.com/app */
+
+:where(.theme-host):where(.dark-theme) {
+    --gem-sys-color--surface: black;
+}
+
+[_nghost-ng-c694259545] {
+    background: unset;
+}
+
+[_nghost-ng-c694259545]:before {
+    display: none;
+}
