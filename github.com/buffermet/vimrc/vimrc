@@ -53,8 +53,8 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :vnoremap <silent><c-s> <c-c>:update<cr>gv
 :inoremap <silent><c-s> <c-o>:update<cr>
 :set mouse=a
-:set tabstop=4
-:set shiftwidth=4
+:set tabstop=8
+:set shiftwidth=8
 :set noexpandtab
 :set autoindent
 :nnoremap <S-Tab> <<
