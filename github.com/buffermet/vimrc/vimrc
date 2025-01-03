@@ -80,6 +80,7 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :inoremap +dispatch_async dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,<Space>0),<Space>^(void){<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
 :inoremap +dispatch_once static<Space>dispatch_once_t<Space>onceToken;<Enter>dispatch_once(&onceToken,<Space>^{<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
 :inoremap +dispatch_semaphore dispatch_semaphore_t<Space>semaphore<Space>=<Space>dispatch_semaphore_create(0);<Enter>dispatch_semaphore_signal(semaphore);<Enter>if<Space>(![NSThread<Space>isMainThread])<Space>{<Enter><Tab>dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_FOREVER);<Enter><Backspace><Backspace>}<Space>else<Space>{<Enter><Tab>while<Space>(dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_NOW))<Space>{<Enter><Tab>[[NSRunLoop<Space>currentRunLoop]<Enter><Tab>runMode:NSDefaultRunLoopMode<Enter>beforeDate:[NSDate<Space>dateWithTimeIntervalSinceNow:0]];<Enter><Backspace><Backspace><Backspace><Backspace>}<Enter><Backspace><Backspace>}
+:inoremap +Promise Promise((ok,<Space>error)<Space>=><Space>{})<Left><Left>
 
 set fillchars+=vert:\ 
 
