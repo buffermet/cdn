@@ -45,9 +45,6 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :nnoremap <c-Down> 10<Down>
 :vnoremap <c-Down> 10<Down>
 :inoremap <c-Down> <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>
-:nnoremap +2c8734ncty234hut3c4 10<Down>
-:vnoremap +2c8734ncty234hut3c4 10<Down>
-:inoremap +2c8734ncty234hut3c4 <Down><Down><Down><Down><Down><Down><Down><Down><Down><Down>
 :nnoremap <silent><c-x> :q<cr>
 :nnoremap <silent><c-s> :<c-u>update<cr>
 :vnoremap <silent><c-s> <c-c>:update<cr>gv
