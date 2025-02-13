@@ -6,9 +6,9 @@ call plug#end()
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:go_doc_keywordprg_enabled = 0
-" Use gopls for autocompletion
 let g:go_autocomplete_mode='gopls'
 autocmd FileType go nmap <buffer> K :vertical botright GoDoc<CR>
+autocmd FileType go imap <buffer> <C-k> <C-x>
 
 function! ToggleComment()
 	let pos=getpos(".")
