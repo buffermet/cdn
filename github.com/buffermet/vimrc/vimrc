@@ -41,6 +41,7 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :set whichwrap+=<,>,[,]
 :set backspace=indent,eol,start
 :set fillchars=vert:\│
+:set timeoutlen=0
 :colorscheme retrobox
 :syntax on
 :syntax sync minlines=10000
