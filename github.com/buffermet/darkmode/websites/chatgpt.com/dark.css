@@ -1,9 +1,9 @@
-html,
 body,
+#composer-background,
 .bg-token-main-surface-primary {
-    background: black;
+	background-color: black !important;
 }
 
-.dark\:bg-token-main-surface-secondary:is(.dark *) {
-    background: rgba(255,255,255,0.05)
+#composer-background {
+	border: 1px solid rgba(255,255,255,0.1) !important;
 }
