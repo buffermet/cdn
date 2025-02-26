@@ -7,3 +7,13 @@ body,
 #composer-background {
 	border: 1px solid rgba(255,255,255,0.1) !important;
 }
+
+.dark .light,
+.light,
+html {
+	--text-primary: white !important;
+}
+
+.prose {
+	--tw-prose-code: black !important;
+}
