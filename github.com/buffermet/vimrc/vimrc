@@ -26,12 +26,12 @@ endfunction
 
 autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 	\ | hi Normal ctermbg=none
-	\ | hi VertSplit ctermbg=none
+	\ | hi VertSplit ctermbg=none ctermfg=236
 	\ | hi EndOfBuffer ctermfg=black
 	\ | hi Pmenu ctermbg=8 ctermfg=white
 	\ | hi PmenuSel ctermfg=15 ctermbg=red
-	\ | hi StatusLine ctermbg=3
-	\ | hi StatusLineNC ctermbg=none ctermfg=white
+	\ | hi StatusLine ctermbg=3 ctermfg=black
+	\ | hi StatusLineNC ctermbg=none ctermfg=black
 	\ | hi CursorLine ctermbg=3 ctermfg=black
 	\ | hi Folded ctermbg=none ctermfg=3
 
@@ -90,8 +90,6 @@ autocmd ColorScheme * hi EndOfBuffer ctermfg=3 ctermbg=none
 :inoremap +dispatch_once static<Space>dispatch_once_t<Space>onceToken;<Enter>dispatch_once(&onceToken,<Space>^{<Enter><Tab><Enter><Backspace><Backspace>});<Up><End>
 :inoremap +dispatch_semaphore dispatch_semaphore_t<Space>semaphore<Space>=<Space>dispatch_semaphore_create(0);<Enter>dispatch_semaphore_signal(semaphore);<Enter>if<Space>(![NSThread<Space>isMainThread])<Space>{<Enter><Tab>dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_FOREVER);<Enter><Backspace><Backspace>}<Space>else<Space>{<Enter><Tab>while<Space>(dispatch_semaphore_wait(semaphore,<Space>DISPATCH_TIME_NOW))<Space>{<Enter><Tab>[[NSRunLoop<Space>currentRunLoop]<Enter><Tab>runMode:NSDefaultRunLoopMode<Enter>beforeDate:[NSDate<Space>dateWithTimeIntervalSinceNow:0]];<Enter><Backspace><Backspace><Backspace><Backspace>}<Enter><Backspace><Backspace>}
 :inoremap +Promise Promise((ok,<Space>error)<Space>=><Space>{})<Left><Left>
-
-set fillchars+=vert:\ 
 
 let g:netrw_liststyle=3
 let g:netrw_banner=0
