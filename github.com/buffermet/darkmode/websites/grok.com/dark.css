@@ -1,0 +1,7 @@
+.dark {
+	--background: hsl(var(--black));
+	--surface-base: hsl(var(--black));
+}
+.from-background {
+	--tw-gradient-from: var(--black) var(--tw-gradient-from-position);
+}
