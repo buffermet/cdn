@@ -1,0 +1,15 @@
+.dark\:odd\:bg-slate-700:nth-child(odd):is(.dark *),
+.dark\:bg-slate-700:is(.dark *),
+.dark\:bg-gray-700:is(.dark *),
+.dark\:bg-slate-800:is(.dark *) {
+    background: #222;
+}
+
+.dark\:even\:bg-\[\#262E3A\]:nth-child(2n):is(.dark *) {
+    background: #111;
+}
+
+tr.relative.h-12.\[\&\:last-child_td\:first-of-type\]\:rounded-bl-sm.\[\&\:last-child_td\:last-of-type\]\:rounded-br-sm > td:nth-child(1) > div > button > svg,
+tr:nth-child(2) > td > div > div.flex.flex-wrap.items-center.gap-x-4.gap-y-4.md\:justify-between.justify-center.\32 xl\:justify-start > div.order-1.sm\:order-none.md\:flex-1 > div {
+    filter: grayscale();
+}
