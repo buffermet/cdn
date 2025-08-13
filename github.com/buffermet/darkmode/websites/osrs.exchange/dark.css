@@ -9,7 +9,12 @@
     background: #111;
 }
 
+#__next > div > div > main > div > div > div > div > div.w-full.bg-gradient-to-b.from-gray-50\/50.to-transparent.dark\:from-gray-900\/30.dark\:to-transparent.\32 xl\:hidden > div > div:nth-child(2) > div,
 tr.relative.h-12.\[\&\:last-child_td\:first-of-type\]\:rounded-bl-sm.\[\&\:last-child_td\:last-of-type\]\:rounded-br-sm > td:nth-child(1) > div > button > svg,
 tr:nth-child(2) > td > div > div.flex.flex-wrap.items-center.gap-x-4.gap-y-4.md\:justify-between.justify-center.\32 xl\:justify-start > div.order-1.sm\:order-none.md\:flex-1 > div {
     filter: grayscale();
+}
+
+.dark\:bg-slate-800\/95:is(.dark *) {
+    background: transparent;
 }
