@@ -1,63 +1,59 @@
 (function() {
-  "use strict";
+	"use strict";
 
-  let lastTitle = "";
+	let lastTitle = "";
 
-  const pollVideoNotification = () => {
-    let title = "";
+	const pollVideoNotification = () => {
+		let title = "";
 
-    let playlistTitleNode = document.querySelector("ytd-playlist-panel-video-renderer[selected] h4");
-    let singleVideoTitleNode = document.querySelectorAll("yt-formatted-string.style-scope.style-scope.ytd-video-primary-info-renderer")[1];
+		let playlistTitleNode = document.querySelector("ytd-playlist-panel-video-renderer[selected] h4");
+		let singleVideoTitleNode = document.querySelectorAll("yt-formatted-string.style-scope.style-scope.ytd-video-primary-info-renderer")[1];
 
-    if (playlistTitleNode) {
-      title = playlistTitleNode.innerText;
-    } else if (singleVideoTitleNode) {
-      title = singleVideoTitleNode.innerText;
-    }
+		if (playlistTitleNode) {
+			title = playlistTitleNode.innerText;
+		} else if (singleVideoTitleNode) {
+			title = singleVideoTitleNode.innerText;
+		}
+		if (title != lastTitle) {
+			new Notification("Now playing", {body: title});
+		}
+		lastTitle = title;
+	};
 
-    if (title != lastTitle) {
-      new Notification("Now playing", {body: title});
-    }
+	const musicPlayer = () => {
+		if (!document.documentElement.classList.contains("_musicPlayer")) {
+			document.querySelectorAll("button[aria-label=Collapse]").forEach(b => b.click());
+			document.querySelector("div#player") ? document.querySelector("div#player").style.display = "none" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.visibility = "hidden" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.height = "0" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.minHeight = "0" : "";
+			document.documentElement.classList.add("_musicPlayer");
+			setInterval(pollVideoNotification, 2000);
+		} else {
+			document.querySelectorAll("button[aria-label=Expand]").forEach(b => b.click());
+			document.querySelector("div#player") ? document.querySelector("div#player").style.display = "" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.visibility = "" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.height = "" : "";
+			document.querySelector("div#full-bleed-container") ? document.querySelector("div#full-bleed-container").style.minHeight = "" : "";
+			document.documentElement.classList.remove("_musicPlayer");
+			clearInterval(pollVideoNotification);
+		}
+	};
 
-    lastTitle = title;
-  };
-
-  const musicPlayer = () => {
-    const html = document.querySelector("html");
-    if (!html.classList.contains("_musicPlayer")) {
-      html.classList.add("_musicPlayer");
-      if (document.querySelector("ytd-playlist-panel-renderer")) {
-        document.querySelector("ytd-playlist-panel-renderer").style.maxHeight = "80vh";
-        document.querySelector("ytd-playlist-panel-renderer div#container").style.maxHeight = "80vh";
-      }
-      document.querySelector("#primary-inner #player").style.display = "none";
-      document.querySelectorAll(
-        "ytd-watch-flexy:not([theater]):not([fullscreen]) #primary.ytd-watch-flexy,\
-         ytd-watch-flexy:not([theater]):not([fullscreen]) #secondary.ytd-watch-flexy"
-      ).forEach(node=>{
-        node.style.paddingTop = "0pt";
-      });
-      setInterval(pollVideoNotification, 2000);
-    } else {
-      html.classList.remove("_musicPlayer");
-      if (document.querySelector("ytd-playlist-panel-renderer")) {
-        document.querySelector("ytd-playlist-panel-renderer").style.maxHeight = "initial";
-        document.querySelector("ytd-playlist-panel-renderer div#container").style.maxHeight = "initial";
-      }
-      document.querySelector("#primary-inner #player").style.display = "initial";
-      document.querySelectorAll(
-        "ytd-watch-flexy:not([theater]):not([fullscreen]) #primary.ytd-watch-flexy,\
-         ytd-watch-flexy:not([theater]):not([fullscreen]) #secondary.ytd-watch-flexy"
-      ).forEach(node=>{
-        node.style.paddingTop = "initial";
-      });
-      removeInterval(pollVideoNotification);
-    }
-  };
-
-  globalThis.addEventListener("keydown", function(e){
-    if (e.shiftKey && e.altKey && e.key === "M") {
-      musicPlayer();
-    }
-  });
+	globalThis.addEventListener("keydown", function(e) {
+		if (e.shiftKey && e.altKey && e.key === "M") {
+			musicPlayer();
+		}
+		if (e.key === "L" && e.shiftKey && e.altKey) {
+			document.querySelector("#top-level-buttons-computed > segmented-like-dislike-button-view-model > yt-smartimation > div > div > like-button-view-model > toggle-button-view-model > button-view-model > button").click();
+		}
+		if (e.key === "R" && e.shiftKey && e.altKey) {
+			const video = document.querySelector("video");
+			if (video.loop) {
+				video.loop = false;
+			} else {
+				video.loop = true;
+			}
+		}
+	});
 })();
