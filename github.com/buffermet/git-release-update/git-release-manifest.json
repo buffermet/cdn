@@ -1,5 +1,4 @@
 {
-	"downloadPath": "/sdcard/Download/git-releases",
 	"repositories": {
 		"brave/brave-browser": {
 			"filenameSelector": "^Bravearm64Universal[.]apk$"
