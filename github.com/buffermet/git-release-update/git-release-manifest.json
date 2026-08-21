@@ -1,16 +1,28 @@
 {
 	"repositories": {
+		"AbdurazaaqMohammed/AntiSplit-M": {
+			"filenameSelector": "^AntiSplit-M.*[.]apk$"
+		},
 		"brave/brave-browser": {
 			"filenameSelector": "^Bravearm64Universal[.]apk$"
 		},
-		"uazo/cromite": {
-			"filenameSelector": "^arm64_ChromePublic[.]apk$"
+		"mrwm/QRshare": {
+			"filenameSelector": "^app-release[.]apk$"
+		},
+		"termux/termux-api": {
+			"filenameSelector": "^termux-api-.*[.]apk$"
+		},
+		"termux/termux-app": {
+			"filenameSelector": "^termux-app_.*-android-7-github-debug_arm64-v8a[.]apk$"
+		},
+		"termux/termux-boot": {
+			"filenameSelector": "^termux-boot-app_.*[.]apk$"
 		},
 		"T8RIN/ImageToolbox": {
 			"filenameSelector": "^image-toolbox-.*-foss-arm64-v8a[.]apk$"
 		},
-		"mrwm/QRshare": {
-			"filenameSelector": "^app-release[.]apk$"
+		"uazo/cromite": {
+			"filenameSelector": "^arm64_ChromePublic[.]apk$"
 		}
 	}
 }
