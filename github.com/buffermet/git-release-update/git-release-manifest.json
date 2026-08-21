@@ -1,0 +1,17 @@
+{
+	"downloadPath": "/sdcard/Download/git-releases",
+	"repositories": {
+		"brave/brave-browser": {
+			"filenameSelector": "^Bravearm64Universal[.]apk$"
+		},
+		"uazo/cromite": {
+			"filenameSelector": "^arm64_ChromePublic[.]apk$"
+		},
+		"T8RIN/ImageToolbox": {
+			"filenameSelector": "^image-toolbox-.*-foss-arm64-v8a[.]apk$"
+		},
+		"mrwm/QRshare": {
+			"filenameSelector": "^app-release[.]apk$"
+		}
+	}
+}
